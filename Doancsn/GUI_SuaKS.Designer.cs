@@ -39,9 +39,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboMakv = new Doancsn.RJComboBox();
             this.btnSave = new Doancsn.RJButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelThem = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
-            this.panel1.SuspendLayout();
+            this.panelThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,14 +216,15 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // panel1
+            // panelThem
             // 
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 40);
-            this.panel1.TabIndex = 4;
+            this.panelThem.Controls.Add(this.btnClose);
+            this.panelThem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelThem.Location = new System.Drawing.Point(0, 0);
+            this.panelThem.Name = "panelThem";
+            this.panelThem.Size = new System.Drawing.Size(493, 40);
+            this.panelThem.TabIndex = 4;
+            this.panelThem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelThem_MouseDown);
             // 
             // btnClose
             // 
@@ -246,7 +247,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(493, 530);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelThem);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cboMakv);
             this.Controls.Add(this.label5);
@@ -261,7 +262,7 @@
             this.Name = "GUI_SuaKS";
             this.Text = "GUI_SuaKS";
             this.Load += new System.EventHandler(this.GUI_SuaKS_Load);
-            this.panel1.ResumeLayout(false);
+            this.panelThem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,7 +282,7 @@
         private System.Windows.Forms.Label label5;
         private RJComboBox cboMakv;
         private RJButton btnSave;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelThem;
         private FontAwesome.Sharp.IconPictureBox btnClose;
     }
 }

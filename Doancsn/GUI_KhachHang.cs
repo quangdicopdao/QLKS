@@ -8,11 +8,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO_QLKS;
+using BUS_QLKS;
 namespace Doancsn
 {
     public partial class GUI_KhachHang : Form
     {
+        BUS_KhachHang bus = new BUS_KhachHang();
         public GUI_KhachHang()
         {
             InitializeComponent();
@@ -47,6 +49,34 @@ namespace Doancsn
             btnNam.Checked = false;
             btnNu.Checked = false;
             txtMaKH.Focus();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if ( txtTenkh.Texts != "" && (btnNam.Checked == true || btnNu.Checked == true) && txtCCCD.Texts != "")
+            {
+                DTO_KhachHang t;
+                if (btnNam.Checked)
+                {
+                    t = new DTO_KhachHang(0, txtTenkh.Texts, true, txtCCCD.Texts, dpkNgaySinh.Text);
+                }
+                else
+                {
+                    t = new DTO_KhachHang(0, txtTenkh.Texts, false, txtCCCD.Texts, dpkNgaySinh.Text);
+                }
+                if (bus.themKhachHang(t))
+                {
+                    MessageBox.Show("Them thanh cong");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm ko thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin");
+            }
         }
     }
 }

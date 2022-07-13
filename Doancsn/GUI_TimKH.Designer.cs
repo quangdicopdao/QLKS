@@ -32,16 +32,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBoxFind = new FontAwesome.Sharp.IconPictureBox();
             this.txtFind = new Doancsn.RJTextBox();
+            this.btnRefesh = new Doancsn.RJButton();
             this.btnAdd = new Doancsn.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFind)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,6 +56,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.iconPictureBoxFind);
             this.panel1.Controls.Add(this.txtFind);
+            this.panel1.Controls.Add(this.btnRefesh);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -74,6 +78,7 @@
             this.iconPictureBoxFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBoxFind.TabIndex = 2;
             this.iconPictureBoxFind.TabStop = false;
+            this.iconPictureBoxFind.Click += new System.EventHandler(this.iconPictureBoxFind_Click);
             // 
             // txtFind
             // 
@@ -96,6 +101,26 @@
             this.txtFind.TabIndex = 1;
             this.txtFind.Texts = "";
             this.txtFind.UnderlinedStyle = false;
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefesh.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnRefesh.BgColor = System.Drawing.Color.BlueViolet;
+            this.btnRefesh.BorderColor = System.Drawing.Color.DarkViolet;
+            this.btnRefesh.BorderRadius = 20;
+            this.btnRefesh.BorderSize = 0;
+            this.btnRefesh.FlatAppearance.BorderSize = 0;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Location = new System.Drawing.Point(916, 23);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(150, 40);
+            this.btnRefesh.TabIndex = 0;
+            this.btnRefesh.Text = "Làm lại";
+            this.btnRefesh.TextColor = System.Drawing.Color.White;
+            this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnAdd
             // 
@@ -136,8 +161,8 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6,
-            this.Column7});
+            this.Edit,
+            this.Delete});
             this.dtgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvKhachHang.Location = new System.Drawing.Point(0, 0);
             this.dtgvKhachHang.Name = "dtgvKhachHang";
@@ -145,6 +170,23 @@
             this.dtgvKhachHang.RowTemplate.Height = 24;
             this.dtgvKhachHang.Size = new System.Drawing.Size(1234, 497);
             this.dtgvKhachHang.TabIndex = 0;
+            this.dtgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKhachHang_CellClick);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Sửa";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 125;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Xóa";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 125;
             // 
             // Column1
             // 
@@ -186,21 +228,21 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
-            // Column6
+            // Edit
             // 
-            this.Column6.HeaderText = "Sửa";
-            this.Column6.Image = ((System.Drawing.Image)(resources.GetObject("Column6.Image")));
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
+            this.Edit.HeaderText = "Sửa";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.Width = 125;
             // 
-            // Column7
+            // Delete
             // 
-            this.Column7.HeaderText = "Xóa";
-            this.Column7.Image = ((System.Drawing.Image)(resources.GetObject("Column7.Image")));
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
+            this.Delete.HeaderText = "Xóa";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 125;
             // 
             // GUI_TimKH
             // 
@@ -228,12 +270,15 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxFind;
         private RJTextBox txtFind;
         private RJButton btnAdd;
+        private RJButton btnRefesh;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewImageColumn Column6;
-        private System.Windows.Forms.DataGridViewImageColumn Column7;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

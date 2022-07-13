@@ -186,9 +186,10 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(178, 42);
             this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "Lưu";
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dpkNgaySinh
             // 
@@ -208,7 +209,7 @@
             this.btnNu.AccessibleDescription = "";
             this.btnNu.AutoSize = true;
             this.btnNu.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnNu.Location = new System.Drawing.Point(274, 284);
+            this.btnNu.Location = new System.Drawing.Point(274, 291);
             this.btnNu.MinimumSize = new System.Drawing.Size(0, 21);
             this.btnNu.Name = "btnNu";
             this.btnNu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -285,6 +286,7 @@
             this.txtMaKH.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtMaKH.BorderRadius = 8;
             this.txtMaKH.BorderSize = 2;
+            this.txtMaKH.Enabled = false;
             this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaKH.Location = new System.Drawing.Point(150, 128);

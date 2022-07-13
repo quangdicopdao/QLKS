@@ -209,7 +209,7 @@
             this.cboLoaidv.MinimumSize = new System.Drawing.Size(200, 30);
             this.cboLoaidv.Name = "cboLoaidv";
             this.cboLoaidv.Padding = new System.Windows.Forms.Padding(1);
-            this.cboLoaidv.Size = new System.Drawing.Size(250, 30);
+            this.cboLoaidv.Size = new System.Drawing.Size(200, 30);
             this.cboLoaidv.TabIndex = 3;
             this.cboLoaidv.Texts = "";
             // 

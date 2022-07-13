@@ -11,34 +11,40 @@ using DTO_QLKS;
 using BUS_QLKS;
 namespace Doancsn
 {
-    public partial class GUI_SuaKS : Form
+    public partial class GUI_SuaKH : Form
     {
+        BUS_KhachHang bus = new BUS_KhachHang();
         string dt1, dt2, dt3, dt4, dt5;
+        bool d13;
+        private void GUI_SuaKH_Load(object sender, EventArgs e)
+        {
+            txtMakh.Texts = dt1;
+            txtTenkh.Texts = dt2;
+            btnNam.Checked = d13;
+            txtCCCD.Texts = dt4;
+            dpkNgaysinh.Text = dt5;
 
-        public GUI_SuaKS(string d1, string d2, string d3, string d4, string d5)
+        }
+
+        public GUI_SuaKH(string d1, string d2, bool d3, string d4, string d5)
         {
             InitializeComponent();
             dt1 = d1;
             dt2 = d2;
-            dt3 = d3;
+            d13 = d3;
             dt4 = d4;
             dt5 = d5;
 
         }
-        private void panelThem_MouseDown(object sender, MouseEventArgs e)
-        {
 
-        }
-
-        BUS_KhachSan bus = new BUS_KhachSan();
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtMaks.Texts != "" && txtTenks.Texts != "" && txtDiaChi.Texts != "" && txtSoPhong.Texts != "" && cboMakv.Texts != "")
+            if (txtMakh.Texts != "" && txtTenkh.Texts != "" && txtCCCD.Texts !="" && dpkNgaysinh.Text != "" )
             {
 
 
-                DTO_KhachSan dt = new DTO_KhachSan(txtMaks.Texts, txtTenks.Texts, txtDiaChi.Texts, Convert.ToInt32(txtSoPhong.Texts), cboMakv.Texts); ;
-                if (bus.suaKhachSan(dt))
+                DTO_KhachHang dt = new DTO_KhachHang(Convert.ToInt32( txtMakh.Texts), txtTenkh.Texts, btnNam.Checked, txtCCCD.Texts, dpkNgaysinh.Text) ;
+                if (bus.suaKhachHang(dt))
                 {
                     MessageBox.Show("Sửa thành công");
                 }
@@ -52,19 +58,5 @@ namespace Doancsn
                 MessageBox.Show("Xin hãy nhập đầy đủ");
             }
         }
-
-        private void GUI_SuaKS_Load(object sender, EventArgs e)
-        {
-            //
-            txtMaks.Texts = dt1;
-            txtTenks.Texts = dt2;
-            txtDiaChi.Texts = dt3;
-            txtSoPhong.Texts = dt4;
-            cboMakv.Texts = dt5;
-        }
-
-     
-
-
     }
 }

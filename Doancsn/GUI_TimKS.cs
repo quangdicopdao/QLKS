@@ -37,7 +37,7 @@ namespace Doancsn
         private void iconPictureBoxFind_Click(object sender, EventArgs e)
         {
             txtFind.Texts.ToUpper();
-            dtgvKhachSan.DataSource = busKS.getTimKiem("SELECT * FROM KHACHSAN WHERE TENKS LIKE '%" + txtFind.Texts.Trim() + "'");
+            dtgvKhachSan.DataSource = busKS.getTimKiem("SELECT * FROM KHACHSAN WHERE TENKS LIKE '%" + txtFind.Texts.Trim() + "%'");
         }
 
         private void dtgvKhachSan_CellClick(object sender, DataGridViewCellEventArgs e)
