@@ -48,6 +48,7 @@ namespace Doancsn
         }
         private void GUI_TimDV_Load(object sender, EventArgs e)
         {
+            //
             dtgvDichVu.DataSource = busDV.getDichVu();
         }
 
