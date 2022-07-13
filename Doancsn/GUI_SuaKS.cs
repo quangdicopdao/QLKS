@@ -39,6 +39,7 @@ namespace Doancsn
 
         private void GUI_SuaKS_Load(object sender, EventArgs e)
         {
+            //
             txtMaks.Texts = dt1;
             txtTenks.Texts = dt2;
             txtDiaChi.Texts = dt3;
