@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Doancsn
+{
+    public partial class GUI_DatPhongDichVu : Form
+    {
+        private string btnText;
+        private int dem = 0;
+        public GUI_DatPhongDichVu()
+        {
+            InitializeComponent();
+            
+        }
+
+        public GUI_DatPhongDichVu(string data)
+        {
+            InitializeComponent();
+            this.btnText = data; 
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void iconButtonPrevious_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+       
+        private void GUI_DatPhongDichVu_Load(object sender, EventArgs e)
+        {
+            lbRoom.Text = btnText;
+        }
+
+        private void btnNhanPhongThanhToan_Click(object sender, EventArgs e)
+        {
+            dem++;
+            if (dem == 1)
+            {
+                btnThemDV.Visible = true;
+            }
+            else
+            {
+                btnNhanPhongThanhToan.Text = "Thanh toán";
+            }
+        }
+
+        private void btnThemDV_Click(object sender, EventArgs e)
+        {
+            GUI_UserThemDV themdv = new GUI_UserThemDV(btnText);
+            themdv.Show();
+            this.Hide();
+        }
+    }
+}
