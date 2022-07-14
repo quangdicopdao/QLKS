@@ -31,6 +31,15 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
+        //get so phong cua khach san
+        public DataTable getSoPhong()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT SOPHONG FROM KHACHSAN ", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+            
         /// Thêm Khách sạn
 
         public bool themKhachSan(DTO_KhachSan tv)

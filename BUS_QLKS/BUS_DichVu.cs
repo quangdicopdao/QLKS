@@ -19,6 +19,18 @@ namespace BUS_QLKS
         {
             return dao.getTimKiem(data);
         }
+        public DataTable getLoaidv()
+        {
+            return dao.getLoaidv();
+        }
+        public DataTable getThemdv(string data)
+        {
+            return dao.getThemdv(data);
+        }
+        public DataTable getLoadTatCa()
+        {
+            return dao.getLoadTatCa();
+        }
         public bool themDichVu(DTO_DichVu tv)
         {
             return dao.themDichVu(tv);

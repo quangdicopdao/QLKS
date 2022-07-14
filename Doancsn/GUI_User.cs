@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-
+using BUS_QLKS;
+using DTO_QLKS;
 namespace Doancsn
 {
-    public partial class GUI_NguoiDung : Form
+    public partial class GUI_User : Form
     {
+        BUS_KhachSan bus = new BUS_KhachSan();
         private IconButton currentBtn;
         private Panel leftborderBtn;
         private Form currentChilForm;
@@ -21,7 +23,7 @@ namespace Doancsn
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
-        public GUI_NguoiDung()
+        public GUI_User()
         {
             InitializeComponent();
             leftborderBtn = new Panel();
@@ -165,7 +167,11 @@ namespace Doancsn
 
         private void GUI_NguoiDung_Load(object sender, EventArgs e)
         {
-            CreateButtonHotel(2, 2);
+            cboSoPhong.DisplayMember = "SOPHONG";
+            cboSoPhong.ValueMember =  "SOPHONG";
+            cboSoPhong.DataSource = bus.getSoPhong();
+            int sp = Convert.ToInt32(cboSoPhong.Text);
+            CreateButtonHotel(sp/2, (sp/2)+1);
         }
 
         private void cboArea_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -176,6 +182,12 @@ namespace Doancsn
         private void picboxHome_Click(object sender, EventArgs e)
         {
             Reset();
+        }
+
+        private void cboSoPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int sp = Convert.ToInt32(cboSoPhong.Text);
+            CreateButtonHotel(sp / 2, (sp / 2) + 1);
         }
     }
 }

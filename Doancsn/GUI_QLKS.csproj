@@ -74,11 +74,17 @@
     <Compile Include="GUI_DangNhap.Designer.cs">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_DatPhongDichVu.cs">
+    <Compile Include="GUI_SuaNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_DatPhongDichVu.Designer.cs">
-      <DependentUpon>GUI_DatPhongDichVu.cs</DependentUpon>
+    <Compile Include="GUI_SuaNV.Designer.cs">
+      <DependentUpon>GUI_SuaNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_UserDatPhongDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_UserDatPhongDichVu.Designer.cs">
+      <DependentUpon>GUI_UserDatPhongDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_DoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -182,11 +188,11 @@
     <Compile Include="GUI_TrangChu.Designer.cs">
       <DependentUpon>GUI_TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_NguoiDung.cs">
+    <Compile Include="GUI_User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_NguoiDung.Designer.cs">
-      <DependentUpon>GUI_NguoiDung.cs</DependentUpon>
+    <Compile Include="GUI_User.Designer.cs">
+      <DependentUpon>GUI_User.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_UserPhong.cs">
       <SubType>Form</SubType>
@@ -223,8 +229,11 @@
     <EmbeddedResource Include="GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_DatPhongDichVu.resx">
-      <DependentUpon>GUI_DatPhongDichVu.cs</DependentUpon>
+    <EmbeddedResource Include="GUI_SuaNV.resx">
+      <DependentUpon>GUI_SuaNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_UserDatPhongDichVu.resx">
+      <DependentUpon>GUI_UserDatPhongDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_DoiMatKhau.resx">
       <DependentUpon>GUI_DoiMatKhau.cs</DependentUpon>
@@ -277,8 +286,8 @@
     <EmbeddedResource Include="GUI_TrangChu.resx">
       <DependentUpon>GUI_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_NguoiDung.resx">
-      <DependentUpon>GUI_NguoiDung.cs</DependentUpon>
+    <EmbeddedResource Include="GUI_User.resx">
+      <DependentUpon>GUI_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_UserPhong.resx">
       <DependentUpon>GUI_UserPhong.cs</DependentUpon>

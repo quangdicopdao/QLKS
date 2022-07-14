@@ -8,12 +8,14 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS_QLKS;
+using DTO_QLKS;
 namespace Doancsn
 {
     public partial class GUI_UserThemDV : Form
     {
         string lbText;
+        BUS_DichVu bus = new BUS_DichVu();
         public GUI_UserThemDV()
         {
             InitializeComponent();
@@ -39,7 +41,7 @@ namespace Doancsn
         private void iconButtonPrevious_Click(object sender, EventArgs e)
         {
             this.Close();
-            GUI_DatPhongDichVu pdv = new GUI_DatPhongDichVu(lbText);
+            GUI_UserDatPhongDichVu pdv = new GUI_UserDatPhongDichVu(lbText);
             pdv.ShowDialog();
         }
 
@@ -51,6 +53,27 @@ namespace Doancsn
 
         private void GUI_ThemDV_Load(object sender, EventArgs e)
         {
+            dtgvThemDV.DataSource = bus.getLoadTatCa();
+        }
+
+        private void cboLoaidv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cboLoaidv.SelectedIndex == 0)
+            {
+                dtgvThemDV.DataSource = bus.getLoadTatCa();
+            }
+            else
+            {
+                dtgvThemDV.DataSource = bus.getThemdv(cboLoaidv.Text);
+            }
+        }
+        int soluong = 0;
+        private void dtgvThemDV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dtgvThemDV.Columns[e.ColumnIndex].Name == "Add")
+            {
+
+            }
         }
     }
 }

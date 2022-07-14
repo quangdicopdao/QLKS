@@ -1,6 +1,6 @@
 ﻿namespace Doancsn
 {
-    partial class GUI_DatPhongDichVu
+    partial class GUI_UserDatPhongDichVu
     {
         /// <summary>
         /// Required designer variable.

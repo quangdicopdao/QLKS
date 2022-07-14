@@ -138,11 +138,11 @@
   <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Edit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Column6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEX29vb39vb49/f59/f49/b39/bp
@@ -158,10 +158,10 @@
         uSA+0PvMOjrMQKwDUs/AAACF7CRdsX1otQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAAQCAMAAADK8RQqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABjFBMVEX39/f29vb29/f29PT5///w3N/u
@@ -171,7 +171,7 @@
         OU/x4OPnsbnMOlDGIjvjlqHXaXrTV2rXZnfUWmzXaXnjlaHGIjrmsbn28/ThlqHHKD/lnqjdgY/df43c
         fYvegpDdgI7lnqnhlqLknajbeIbbeIfceoncfIrmsLnce4nLNUvkm6bcfIvce4rdfo3ZfovIK0LnprDT
         VmjYa3zQTmHEGzXhj5vuxcvorbbqsrrFHDXPTWDx6evw3+LRU2bFHjfJLUXLNUzLNkzRU2Xu3eDz8vLg
-        nKbRVGfKNErLOk/hnaf///8f2ynJAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5gcIEQ03a6q0
+        nKbRVGfKNErLOk/hnaf///8f2ynJAAAACXBIWXMAAA7AAAAOwAFq1okJAAAAB3RJTUUH5gcIEQ03a6q0
         xQAAATNJREFUKFNjYGAEIiZmJhYGVjZ2Jg5OZiZGoBAUcnHz8PLxC/ALCnEJcwH5QLUgQkRYVExcQlJK
         UkJaRlZOHqwWKM6ooKikrKKqpq6uqqKhqaUAVAkWZ9bW0dXTNzA0MjQwVjIx1WYGm81gZm5haWVtY6tv
         p2/v4Gjl5GxuBlLOwMziIunq5u7h6eXt4+vnKunPAtQAFA/gCBR3CgoOCQ0Lj4gMchKP4ghAiEtGh8XE

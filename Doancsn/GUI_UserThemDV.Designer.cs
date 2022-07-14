@@ -30,54 +30,99 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_UserThemDV));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconButtonPrevious = new FontAwesome.Sharp.IconButton();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Add = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtgvXoaDV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dtgvThemDV = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconButtonPrevious = new FontAwesome.Sharp.IconButton();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.rjButton1 = new Doancsn.RJButton();
-            this.rjComboBox1 = new Doancsn.RJComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Add = new System.Windows.Forms.DataGridViewImageColumn();
+            this.cboLoaidv = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvXoaDV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThemDV)).BeginInit();
             this.panelTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.cboLoaidv);
+            this.panel1.Controls.Add(this.dtgvXoaDV);
+            this.panel1.Controls.Add(this.dtgvThemDV);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.rjComboBox1);
             this.panel1.Location = new System.Drawing.Point(46, 132);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1153, 400);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dtgvXoaDV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvXoaDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvXoaDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.Soluong,
+            this.ThanhTien,
+            this.dataGridViewImageColumn1});
+            this.dtgvXoaDV.Location = new System.Drawing.Point(583, 99);
+            this.dtgvXoaDV.Name = "dtgvXoaDV";
+            this.dtgvXoaDV.RowHeadersWidth = 51;
+            this.dtgvXoaDV.RowTemplate.Height = 24;
+            this.dtgvXoaDV.Size = new System.Drawing.Size(558, 280);
+            this.dtgvXoaDV.TabIndex = 4;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên dịch vụ";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // Soluong
+            // 
+            this.Soluong.HeaderText = "Số lượng";
+            this.Soluong.MinimumWidth = 6;
+            this.Soluong.Name = "Soluong";
+            this.Soluong.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 125;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Add";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dtgvThemDV
+            // 
+            this.dtgvThemDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvThemDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Add});
-            this.dataGridView1.Location = new System.Drawing.Point(19, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(558, 280);
-            this.dataGridView1.TabIndex = 4;
+            this.dtgvThemDV.Location = new System.Drawing.Point(19, 99);
+            this.dtgvThemDV.Name = "dtgvThemDV";
+            this.dtgvThemDV.RowHeadersWidth = 51;
+            this.dtgvThemDV.RowTemplate.Height = 24;
+            this.dtgvThemDV.Size = new System.Drawing.Size(558, 280);
+            this.dtgvThemDV.TabIndex = 4;
+            this.dtgvThemDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvThemDV_CellClick);
             // 
             // label1
             // 
@@ -113,79 +158,6 @@
             this.panelTitle.TabIndex = 3;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Loại dịch vụ";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên dịch vụ";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Giá";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Add
-            // 
-            this.Add.HeaderText = "Add";
-            this.Add.Image = ((System.Drawing.Image)(resources.GetObject("Add.Image")));
-            this.Add.MinimumWidth = 6;
-            this.Add.Name = "Add";
-            this.Add.Width = 50;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.Soluong,
-            this.ThanhTien,
-            this.dataGridViewImageColumn1});
-            this.dataGridView2.Location = new System.Drawing.Point(583, 99);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(558, 280);
-            this.dataGridView2.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên dịch vụ";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // Soluong
-            // 
-            this.Soluong.HeaderText = "Số lượng";
-            this.Soluong.MinimumWidth = 6;
-            this.Soluong.Name = "Soluong";
-            this.Soluong.Width = 125;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.Width = 125;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Add";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -215,26 +187,52 @@
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // rjComboBox1
+            // Column1
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(139, 17);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(200, 37);
-            this.rjComboBox1.TabIndex = 0;
-            this.rjComboBox1.Texts = "";
+            this.Column1.DataPropertyName = "LOAIDV";
+            this.Column1.HeaderText = "Loại dịch vụ";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
             // 
-            // GUI_ThemDV
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TENDV";
+            this.Column2.HeaderText = "Tên dịch vụ";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "DONGIA";
+            this.Column3.HeaderText = "Giá";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Add
+            // 
+            this.Add.HeaderText = "Add";
+            this.Add.Image = ((System.Drawing.Image)(resources.GetObject("Add.Image")));
+            this.Add.MinimumWidth = 6;
+            this.Add.Name = "Add";
+            this.Add.Width = 50;
+            // 
+            // cboLoaidv
+            // 
+            this.cboLoaidv.FormattingEnabled = true;
+            this.cboLoaidv.Items.AddRange(new object[] {
+            "TẤT CẢ",
+            "ĐỒ ĂN",
+            "NƯỚC UỐNG"});
+            this.cboLoaidv.Location = new System.Drawing.Point(122, 26);
+            this.cboLoaidv.Name = "cboLoaidv";
+            this.cboLoaidv.Size = new System.Drawing.Size(175, 24);
+            this.cboLoaidv.TabIndex = 5;
+            this.cboLoaidv.SelectedIndexChanged += new System.EventHandler(this.cboLoaidv_SelectedIndexChanged);
+            // 
+            // GUI_UserThemDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,14 +242,14 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.panel1);
-            this.Name = "GUI_ThemDV";
+            this.Name = "GUI_UserThemDV";
             this.Text = "GUI_ThemDV";
             this.Load += new System.EventHandler(this.GUI_ThemDV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvXoaDV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThemDV)).EndInit();
             this.panelTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,21 +258,21 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private RJComboBox rjComboBox1;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButtonPrevious;
         private RJButton rjButton1;
         private System.Windows.Forms.Panel panelTitle;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewImageColumn Add;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtgvThemDV;
+        private System.Windows.Forms.DataGridView dtgvXoaDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewImageColumn Add;
+        private System.Windows.Forms.ComboBox cboLoaidv;
     }
 }

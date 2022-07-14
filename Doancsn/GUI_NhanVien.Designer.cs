@@ -39,14 +39,14 @@
             this.txtDiaChi = new Doancsn.RJTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new Doancsn.RJTextBox();
             this.txtSDT = new Doancsn.RJTextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTennv = new Doancsn.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtManv = new Doancsn.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtEmail = new Doancsn.RJTextBox();
             this.panelThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -116,6 +116,7 @@
             this.dpkNgaySinh.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dpkNgaySinh.BorderSize = 0;
             this.dpkNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpkNgaySinh.Location = new System.Drawing.Point(152, 395);
             this.dpkNgaySinh.MinimumSize = new System.Drawing.Size(4, 35);
             this.dpkNgaySinh.Name = "dpkNgaySinh";
@@ -176,9 +177,10 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(172, 43);
             this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Text = "Lưu";
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label5
             // 
@@ -229,6 +231,28 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Địa chỉ";
             // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.BorderColor = System.Drawing.Color.Turquoise;
+            this.txtEmail.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtEmail.BorderRadius = 8;
+            this.txtEmail.BorderSize = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.Location = new System.Drawing.Point(153, 326);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEmail.PasswordChar = false;
+            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.Size = new System.Drawing.Size(237, 35);
+            this.txtEmail.TabIndex = 1;
+            this.txtEmail.Texts = "";
+            this.txtEmail.UnderlinedStyle = false;
+            // 
             // txtSDT
             // 
             this.txtSDT.BackColor = System.Drawing.SystemColors.Window;
@@ -250,6 +274,15 @@
             this.txtSDT.TabIndex = 1;
             this.txtSDT.Texts = "";
             this.txtSDT.UnderlinedStyle = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(37, 339);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Email";
             // 
             // label3
             // 
@@ -322,37 +355,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 339);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderColor = System.Drawing.Color.Turquoise;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtEmail.BorderRadius = 8;
-            this.txtEmail.BorderSize = 2;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.Location = new System.Drawing.Point(153, 326);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "Email";
-            this.txtEmail.Size = new System.Drawing.Size(237, 35);
-            this.txtEmail.TabIndex = 1;
-            this.txtEmail.Texts = "";
-            this.txtEmail.UnderlinedStyle = false;
-            // 
             // GUI_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -361,6 +363,7 @@
             this.Controls.Add(this.panelThem);
             this.Name = "GUI_NhanVien";
             this.Text = "GUI_NhanVien";
+            this.Load += new System.EventHandler(this.GUI_NhanVien_Load);
             this.panelThem.ResumeLayout(false);
             this.panelThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();

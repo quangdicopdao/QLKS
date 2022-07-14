@@ -44,10 +44,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjRadioButton4 = new Doancsn.RJRadioButton();
+            this.btnTatCa = new Doancsn.RJRadioButton();
             this.rjRadioButton11 = new Doancsn.RJRadioButton();
-            this.rjRadioButton7 = new Doancsn.RJRadioButton();
-            this.rjRadioButton3 = new Doancsn.RJRadioButton();
             this.rjRadioButton10 = new Doancsn.RJRadioButton();
             this.rjRadioButton6 = new Doancsn.RJRadioButton();
             this.rjRadioButton2 = new Doancsn.RJRadioButton();
@@ -56,6 +54,7 @@
             this.rjRadioButton1 = new Doancsn.RJRadioButton();
             this.panelCreateRoom = new System.Windows.Forms.Panel();
             this.lbTrangThai = new System.Windows.Forms.Label();
+            this.rjRadioButton3 = new Doancsn.RJRadioButton();
             this.panelClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFind)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
@@ -240,10 +239,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.rjRadioButton4);
-            this.panel1.Controls.Add(this.rjRadioButton11);
-            this.panel1.Controls.Add(this.rjRadioButton7);
             this.panel1.Controls.Add(this.rjRadioButton3);
+            this.panel1.Controls.Add(this.btnTatCa);
+            this.panel1.Controls.Add(this.rjRadioButton11);
             this.panel1.Controls.Add(this.rjRadioButton10);
             this.panel1.Controls.Add(this.rjRadioButton6);
             this.panel1.Controls.Add(this.rjRadioButton2);
@@ -305,22 +303,22 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Trạng thái";
             // 
-            // rjRadioButton4
+            // btnTatCa
             // 
-            this.rjRadioButton4.AutoSize = true;
-            this.rjRadioButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjRadioButton4.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton4.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton4.Location = new System.Drawing.Point(50, 172);
-            this.rjRadioButton4.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton4.Name = "rjRadioButton4";
-            this.rjRadioButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton4.Size = new System.Drawing.Size(142, 21);
-            this.rjRadioButton4.TabIndex = 1;
-            this.rjRadioButton4.TabStop = true;
-            this.rjRadioButton4.Text = "Tất cả các phòng";
-            this.rjRadioButton4.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton4.UseVisualStyleBackColor = false;
+            this.btnTatCa.AutoSize = true;
+            this.btnTatCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnTatCa.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTatCa.ForeColor = System.Drawing.Color.White;
+            this.btnTatCa.Location = new System.Drawing.Point(50, 137);
+            this.btnTatCa.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnTatCa.Name = "btnTatCa";
+            this.btnTatCa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTatCa.Size = new System.Drawing.Size(142, 21);
+            this.btnTatCa.TabIndex = 1;
+            this.btnTatCa.TabStop = true;
+            this.btnTatCa.Text = "Tất cả các phòng";
+            this.btnTatCa.UnCheckedColor = System.Drawing.Color.Gray;
+            this.btnTatCa.UseVisualStyleBackColor = false;
             // 
             // rjRadioButton11
             // 
@@ -337,39 +335,6 @@
             this.rjRadioButton11.Text = "1.500.000";
             this.rjRadioButton11.UnCheckedColor = System.Drawing.Color.Gray;
             this.rjRadioButton11.UseVisualStyleBackColor = true;
-            // 
-            // rjRadioButton7
-            // 
-            this.rjRadioButton7.AutoSize = true;
-            this.rjRadioButton7.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton7.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton7.Location = new System.Drawing.Point(50, 324);
-            this.rjRadioButton7.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton7.Name = "rjRadioButton7";
-            this.rjRadioButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton7.Size = new System.Drawing.Size(142, 21);
-            this.rjRadioButton7.TabIndex = 1;
-            this.rjRadioButton7.TabStop = true;
-            this.rjRadioButton7.Text = "Tất cả các phòng";
-            this.rjRadioButton7.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton7.UseVisualStyleBackColor = true;
-            // 
-            // rjRadioButton3
-            // 
-            this.rjRadioButton3.AutoSize = true;
-            this.rjRadioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjRadioButton3.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton3.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton3.Location = new System.Drawing.Point(50, 136);
-            this.rjRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton3.Name = "rjRadioButton3";
-            this.rjRadioButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton3.Size = new System.Drawing.Size(131, 21);
-            this.rjRadioButton3.TabIndex = 1;
-            this.rjRadioButton3.TabStop = true;
-            this.rjRadioButton3.Text = "Phòng chưa đặt";
-            this.rjRadioButton3.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton3.UseVisualStyleBackColor = false;
             // 
             // rjRadioButton10
             // 
@@ -489,6 +454,23 @@
             this.lbTrangThai.TabIndex = 3;
             this.lbTrangThai.Text = "Trạng thái";
             // 
+            // rjRadioButton3
+            // 
+            this.rjRadioButton3.AutoSize = true;
+            this.rjRadioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.rjRadioButton3.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjRadioButton3.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButton3.Location = new System.Drawing.Point(50, 328);
+            this.rjRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton3.Name = "rjRadioButton3";
+            this.rjRadioButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton3.Size = new System.Drawing.Size(142, 21);
+            this.rjRadioButton3.TabIndex = 1;
+            this.rjRadioButton3.TabStop = true;
+            this.rjRadioButton3.Text = "Tất cả các phòng";
+            this.rjRadioButton3.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton3.UseVisualStyleBackColor = false;
+            // 
             // GUI_UserPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -534,10 +516,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private RJRadioButton rjRadioButton4;
+        private RJRadioButton btnTatCa;
         private RJRadioButton rjRadioButton11;
-        private RJRadioButton rjRadioButton7;
-        private RJRadioButton rjRadioButton3;
         private RJRadioButton rjRadioButton10;
         private RJRadioButton rjRadioButton6;
         private RJRadioButton rjRadioButton2;
@@ -546,5 +526,6 @@
         private RJRadioButton rjRadioButton1;
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.Panel panelCreateRoom;
+        private RJRadioButton rjRadioButton3;
     }
 }

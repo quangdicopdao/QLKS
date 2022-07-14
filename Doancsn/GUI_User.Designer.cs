@@ -1,6 +1,6 @@
 ﻿namespace Doancsn
 {
-    partial class GUI_NguoiDung
+    partial class GUI_User
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_NguoiDung));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_User));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButtonFind = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +40,9 @@
             this.btnExits = new FontAwesome.Sharp.IconButton();
             this.panelKS = new System.Windows.Forms.Panel();
             this.lblKhuVuc = new System.Windows.Forms.Label();
+            this.cboSoPhong = new System.Windows.Forms.ComboBox();
             this.picboxHome = new RJCircularPictureBox();
-            this.rjTextBox1 = new Doancsn.RJTextBox();
+            this.txtFind = new Doancsn.RJTextBox();
             this.cboArea = new Doancsn.RJComboBox();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -52,9 +53,10 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.cboSoPhong);
             this.panelMenu.Controls.Add(this.picboxHome);
             this.panelMenu.Controls.Add(this.iconButtonFind);
-            this.panelMenu.Controls.Add(this.rjTextBox1);
+            this.panelMenu.Controls.Add(this.txtFind);
             this.panelMenu.Controls.Add(this.cboArea);
             this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.btnAccountUser);
@@ -73,7 +75,7 @@
             this.iconButtonFind.IconColor = System.Drawing.Color.White;
             this.iconButtonFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonFind.IconSize = 35;
-            this.iconButtonFind.Location = new System.Drawing.Point(270, 345);
+            this.iconButtonFind.Location = new System.Drawing.Point(274, 383);
             this.iconButtonFind.Name = "iconButtonFind";
             this.iconButtonFind.Size = new System.Drawing.Size(51, 35);
             this.iconButtonFind.TabIndex = 7;
@@ -213,6 +215,17 @@
             this.lblKhuVuc.TabIndex = 0;
             this.lblKhuVuc.Text = "Khu vực";
             // 
+            // cboSoPhong
+            // 
+            this.cboSoPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.cboSoPhong.ForeColor = System.Drawing.Color.White;
+            this.cboSoPhong.FormattingEnabled = true;
+            this.cboSoPhong.Location = new System.Drawing.Point(17, 337);
+            this.cboSoPhong.Name = "cboSoPhong";
+            this.cboSoPhong.Size = new System.Drawing.Size(200, 24);
+            this.cboSoPhong.TabIndex = 9;
+            this.cboSoPhong.SelectedIndexChanged += new System.EventHandler(this.cboSoPhong_SelectedIndexChanged);
+            // 
             // picboxHome
             // 
             this.picboxHome.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -230,27 +243,27 @@
             this.picboxHome.TabStop = false;
             this.picboxHome.Click += new System.EventHandler(this.picboxHome_Click);
             // 
-            // rjTextBox1
+            // txtFind
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.White;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Gainsboro;
-            this.rjTextBox1.BorderRadius = 8;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox1.Location = new System.Drawing.Point(13, 345);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.White;
-            this.rjTextBox1.PlaceholderText = "Tìm khách sạn";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 35);
-            this.rjTextBox1.TabIndex = 6;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.txtFind.BorderColor = System.Drawing.Color.White;
+            this.txtFind.BorderFocusColor = System.Drawing.Color.Gainsboro;
+            this.txtFind.BorderRadius = 8;
+            this.txtFind.BorderSize = 2;
+            this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFind.ForeColor = System.Drawing.Color.White;
+            this.txtFind.Location = new System.Drawing.Point(17, 383);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFind.Multiline = false;
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtFind.PasswordChar = false;
+            this.txtFind.PlaceholderColor = System.Drawing.Color.White;
+            this.txtFind.PlaceholderText = "Tìm khách sạn";
+            this.txtFind.Size = new System.Drawing.Size(250, 35);
+            this.txtFind.TabIndex = 6;
+            this.txtFind.Texts = "";
+            this.txtFind.UnderlinedStyle = false;
             // 
             // cboArea
             // 
@@ -287,7 +300,7 @@
             this.cboArea.Texts = "";
             this.cboArea.OnSelectedIndexChanged += new System.EventHandler(this.cboArea_OnSelectedIndexChanged);
             // 
-            // GUI_NguoiDung
+            // GUI_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -296,7 +309,7 @@
             this.Controls.Add(this.panelKS);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
-            this.Name = "GUI_NguoiDung";
+            this.Name = "GUI_User";
             this.Text = "GUI_User";
             this.Load += new System.EventHandler(this.GUI_NguoiDung_Load);
             this.panelMenu.ResumeLayout(false);
@@ -318,12 +331,13 @@
         private FontAwesome.Sharp.IconButton btnExits;
         private System.Windows.Forms.Panel panelKS;
         private System.Windows.Forms.Label lblKhuVuc;
-        private RJTextBox rjTextBox1;
+        private RJTextBox txtFind;
         private RJComboBox cboArea;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButtonFind;
         private RJCircularPictureBox picboxHome;
         private FontAwesome.Sharp.IconButton btnAccountUser;
         private FontAwesome.Sharp.IconButton btnLogout;
+        private System.Windows.Forms.ComboBox cboSoPhong;
     }
 }

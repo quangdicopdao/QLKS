@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace Doancsn
 {
-    public partial class GUI_DatPhongDichVu : Form
+    public partial class GUI_UserDatPhongDichVu : Form
     {
         private string btnText;
         private int dem = 0;
-        public GUI_DatPhongDichVu()
+        public GUI_UserDatPhongDichVu()
         {
             InitializeComponent();
             
         }
 
-        public GUI_DatPhongDichVu(string data)
+        public GUI_UserDatPhongDichVu(string data)
         {
             InitializeComponent();
             this.btnText = data; 

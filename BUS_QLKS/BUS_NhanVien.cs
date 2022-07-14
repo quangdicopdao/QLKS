@@ -17,6 +17,14 @@ namespace BUS_QLKS
         {
             return dao.getNhanVien();
         }
+        public DataTable loadCB()
+        {
+            return dao.loadCB();
+        }
+        public DataTable getTimNV(string data)
+        {
+            return dao.getTimNV(data);
+        }
         public bool themNhanVien(DTO_NhanVien tv)
         {
             return dao.themNhanVien(tv);

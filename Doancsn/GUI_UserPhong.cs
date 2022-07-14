@@ -52,7 +52,7 @@ namespace Doancsn
                     btn.Click += (sender1, args) =>
                      {
                         
-                          GUI_DatPhongDichVu dv = new GUI_DatPhongDichVu(btn.Text);
+                          GUI_UserDatPhongDichVu dv = new GUI_UserDatPhongDichVu(btn.Text);
 
                                 dv.Show();
                          
@@ -95,7 +95,7 @@ namespace Doancsn
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            GUI_NguoiDung nd = new GUI_NguoiDung();
+            GUI_User nd = new GUI_User();
             nd.Show();
         }
 

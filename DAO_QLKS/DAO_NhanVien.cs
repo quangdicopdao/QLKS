@@ -24,16 +24,24 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
+        //tim nhan vien
+        public DataTable getTimNV(string data)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM NHANVIEN WHERE TENNV LIKE N'%"+data+"%'", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         /// Thêm Khách sạn
 
-        public bool themNhanVien(DTO_NhanVien tv)
+         public bool themNhanVien(DTO_NhanVien tv)
         {
             try
             {
                 // Ket noi
                 _conn.Open();
 
-                string SQL = string.Format("INSERT INTO [NHANVIEN](MANV,TENNV,SDT,EMAIL,NGAYSINH,DIACHI,MAKS) VALUES('{0}', N'{1}', '{2}','{3}','{4}',N'{5}','{6}')", tv.NHANVIEN_MANV, tv.NHANVIEN_TENNV, tv.NHANVIEN_SDT, tv.NHANVIEN_EMAIL, tv.NHANVIEN_NGAYSINH, tv.NHANVIEN_DIACHI, tv.NHANVIEN_MAKS);
+                string SQL = string.Format("INSERT INTO [NHANVIEN](MANV,TENNV,SDT,EMAIL,NGAYSINH,DIACHI,MAKS) VALUES('{0}', N'{1}', '{2}','{3}','{4}',N'{5}','{6}')", tv.NHANVIEN_MANV,tv.NHANVIEN_TENNV,tv.NHANVIEN_SDT,tv.NHANVIEN_EMAIL,tv.NHANVIEN_NGAYSINH,tv.NHANVIEN_DIACHI,tv.NHANVIEN_MAKS);
                 SqlCommand cmd = new SqlCommand(SQL, _conn);
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)

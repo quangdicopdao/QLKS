@@ -17,13 +17,40 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
-
+        //Tim kiem
         public DataTable getTimKiem(string data)
         {
             SqlDataAdapter da = new SqlDataAdapter(data,_conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
+        }
+        //Loai dich vu hien thi all
+        public DataTable getLoadTatCa()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT LOAIDV,TENDV,DONGIA FROM DICHVU ", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+
+        }
+        //Loai dich vu hien thi theo ma dv
+        public DataTable getThemdv(string data)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT LOAIDV,TENDV,DONGIA FROM DICHVU WHERE LOAIDV = N'"+data+"'", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+
+        }
+        //Loai dich vu
+        public DataTable getLoaidv()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DISTINCT LOAIDV FROM DICHVU", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+
         }
         /// Thêm Khách sạn
 

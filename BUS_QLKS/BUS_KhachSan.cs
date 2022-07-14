@@ -23,6 +23,10 @@ namespace BUS_QLKS
         {
             return dao.getMAKV();
         }
+        public DataTable getSoPhong()
+        {
+            return dao.getSoPhong();
+        }
         public bool themKhachSan(DTO_KhachSan tv)
         {
             return dao.themKhachSan(tv);
