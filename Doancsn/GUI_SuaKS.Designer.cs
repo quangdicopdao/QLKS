@@ -54,7 +54,7 @@
             this.txtMaks.BorderSize = 2;
             this.txtMaks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaks.Location = new System.Drawing.Point(171, 78);
+            this.txtMaks.Location = new System.Drawing.Point(177, 48);
             this.txtMaks.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaks.Multiline = false;
             this.txtMaks.Name = "txtMaks";
@@ -70,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 87);
+            this.label1.Location = new System.Drawing.Point(60, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 1;
@@ -85,7 +85,7 @@
             this.txtTenks.BorderSize = 2;
             this.txtTenks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTenks.Location = new System.Drawing.Point(171, 147);
+            this.txtTenks.Location = new System.Drawing.Point(177, 117);
             this.txtTenks.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenks.Multiline = false;
             this.txtTenks.Name = "txtTenks";
@@ -101,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 156);
+            this.label2.Location = new System.Drawing.Point(60, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 16);
             this.label2.TabIndex = 1;
@@ -116,7 +116,7 @@
             this.txtDiaChi.BorderSize = 2;
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDiaChi.Location = new System.Drawing.Point(171, 207);
+            this.txtDiaChi.Location = new System.Drawing.Point(177, 177);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -132,7 +132,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 217);
+            this.label3.Location = new System.Drawing.Point(60, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 1;
@@ -147,7 +147,7 @@
             this.txtSoPhong.BorderSize = 2;
             this.txtSoPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSoPhong.Location = new System.Drawing.Point(171, 315);
+            this.txtSoPhong.Location = new System.Drawing.Point(177, 285);
             this.txtSoPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoPhong.Multiline = false;
             this.txtSoPhong.Name = "txtSoPhong";
@@ -163,7 +163,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 324);
+            this.label4.Location = new System.Drawing.Point(60, 294);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 1;
@@ -172,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 388);
+            this.label5.Location = new System.Drawing.Point(60, 358);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 16);
             this.label5.TabIndex = 1;
@@ -189,7 +189,7 @@
             this.cboMakv.IconColor = System.Drawing.Color.Orange;
             this.cboMakv.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cboMakv.ListTextColor = System.Drawing.Color.DimGray;
-            this.cboMakv.Location = new System.Drawing.Point(171, 373);
+            this.cboMakv.Location = new System.Drawing.Point(177, 343);
             this.cboMakv.MinimumSize = new System.Drawing.Size(200, 30);
             this.cboMakv.Name = "cboMakv";
             this.cboMakv.Padding = new System.Windows.Forms.Padding(1);
@@ -207,7 +207,7 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(341, 458);
+            this.btnSave.Location = new System.Drawing.Point(347, 401);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 60);
             this.btnSave.TabIndex = 3;
@@ -240,13 +240,14 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // GUI_SuaKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(493, 530);
+            this.ClientSize = new System.Drawing.Size(493, 470);
             this.Controls.Add(this.panelThem);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cboMakv);

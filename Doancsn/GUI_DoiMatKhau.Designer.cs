@@ -36,6 +36,7 @@
             this.txtPassNew = new Doancsn.RJTextBox();
             this.cbxShowPass = new System.Windows.Forms.CheckBox();
             this.iconPictureBoxChangPass = new FontAwesome.Sharp.IconPictureBox();
+            this.lbThongBao = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxChangPass)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +99,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnSave.Location = new System.Drawing.Point(68, 490);
+            this.btnSave.Location = new System.Drawing.Point(68, 523);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(272, 47);
             this.btnSave.TabIndex = 3;
@@ -155,7 +156,7 @@
             // 
             this.cbxShowPass.AutoSize = true;
             this.cbxShowPass.ForeColor = System.Drawing.Color.White;
-            this.cbxShowPass.Location = new System.Drawing.Point(68, 430);
+            this.cbxShowPass.Location = new System.Drawing.Point(68, 428);
             this.cbxShowPass.Name = "cbxShowPass";
             this.cbxShowPass.Size = new System.Drawing.Size(114, 20);
             this.cbxShowPass.TabIndex = 3;
@@ -177,12 +178,24 @@
             this.iconPictureBoxChangPass.TabIndex = 4;
             this.iconPictureBoxChangPass.TabStop = false;
             // 
+            // lbThongBao
+            // 
+            this.lbThongBao.AutoSize = true;
+            this.lbThongBao.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbThongBao.Location = new System.Drawing.Point(72, 463);
+            this.lbThongBao.Name = "lbThongBao";
+            this.lbThongBao.Size = new System.Drawing.Size(44, 16);
+            this.lbThongBao.TabIndex = 5;
+            this.lbThongBao.Text = "label1";
+            this.lbThongBao.Visible = false;
+            // 
             // GUI_DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(418, 577);
+            this.ClientSize = new System.Drawing.Size(418, 635);
+            this.Controls.Add(this.lbThongBao);
             this.Controls.Add(this.iconPictureBoxChangPass);
             this.Controls.Add(this.cbxShowPass);
             this.Controls.Add(this.btnSave);
@@ -209,5 +222,6 @@
         private System.Windows.Forms.CheckBox cbxShowPass;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxChangPass;
         private FontAwesome.Sharp.IconButton iconButtonClose;
+        private System.Windows.Forms.Label lbThongBao;
     }
 }

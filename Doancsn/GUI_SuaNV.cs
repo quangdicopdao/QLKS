@@ -9,12 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QLKS;
 using BUS_QLKS;
+using System.Runtime.InteropServices;
+
 namespace Doancsn
 {
     public partial class GUI_SuaNV : Form
     {
         BUS_NhanVien bus = new BUS_NhanVien();
         string d1, d2, d3, d4, d5, d6, d7;
+
+        private void panelThem_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -63,8 +71,15 @@ namespace Doancsn
             d5 = dt5;
             d6 = dt6;
             d7 = dt7;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

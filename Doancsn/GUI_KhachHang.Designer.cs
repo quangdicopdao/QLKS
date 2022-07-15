@@ -196,6 +196,7 @@
             this.dpkNgaySinh.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dpkNgaySinh.BorderSize = 0;
             this.dpkNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpkNgaySinh.Location = new System.Drawing.Point(149, 438);
             this.dpkNgaySinh.MinimumSize = new System.Drawing.Size(4, 35);
             this.dpkNgaySinh.Name = "dpkNgaySinh";

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelThem = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtManv = new Doancsn.RJTextBox();
@@ -45,24 +45,25 @@
             this.btnSave = new Doancsn.RJButton();
             this.cboMaks = new Doancsn.RJComboBox();
             this.dpkNgaysinh = new RJDatePicker();
-            this.panel1.SuspendLayout();
+            this.panelThem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelThem
             // 
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 34);
-            this.panel1.TabIndex = 0;
+            this.panelThem.Controls.Add(this.btnClose);
+            this.panelThem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelThem.Location = new System.Drawing.Point(0, 0);
+            this.panelThem.Name = "panelThem";
+            this.panelThem.Size = new System.Drawing.Size(482, 34);
+            this.panelThem.TabIndex = 0;
+            this.panelThem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelThem_MouseDown);
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.btnClose.IconColor = System.Drawing.SystemColors.ControlText;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 29;
@@ -320,11 +321,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelThem);
             this.Name = "GUI_SuaNV";
             this.Text = "GUI_SuaNV";
             this.Load += new System.EventHandler(this.GUI_SuaNV_Load);
-            this.panel1.ResumeLayout(false);
+            this.panelThem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -333,7 +334,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelThem;
         private FontAwesome.Sharp.IconPictureBox btnClose;
         private System.Windows.Forms.Label label1;
         private RJTextBox txtManv;

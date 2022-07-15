@@ -4,20 +4,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QLKS;
 using BUS_QLKS;
-using System.Runtime.InteropServices;
 
 namespace Doancsn
 {
-    public partial class GUI_SuaKS : Form
+    public partial class GUI_SuaP : Form
     {
-        string dt1, dt2, dt3, dt4, dt5;
-
-        public GUI_SuaKS(string d1, string d2, string d3, string d4, string d5)
+        string dt1,dt2,dt3,dt4,dt5;
+        BUS_Phong bus = new BUS_Phong();
+        public GUI_SuaP(string d1,string d2,string d3,string d4,string d5)
         {
             InitializeComponent();
             dt1 = d1;
@@ -32,6 +32,22 @@ namespace Doancsn
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
+        private void GUI_SuaP_Load(object sender, EventArgs e)
+        {
+            txtMaphong.Texts = dt1;
+            cboLoaiphong.Texts = dt2;
+            txtDongia.Texts = dt3;
+            cboTrangthai.Texts = dt4;
+            cboMaks.Texts = dt5;
+
+            // get cbo
+
+            cboMaks.DisplayMember = "MAKS";
+            cboMaks.ValueMember = "MAKS";
+            cboMaks.DataSource = bus.getMAKS();
+        }
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void btnClose_Click(object sender, EventArgs e)
@@ -45,41 +61,24 @@ namespace Doancsn
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        BUS_KhachSan bus = new BUS_KhachSan();
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtMaks.Texts != "" && txtTenks.Texts != "" && txtDiaChi.Texts != "" && txtSoPhong.Texts != "" && cboMakv.Texts != "")
+            if (txtMaphong.Texts != "" && txtDongia.Texts != "" && cboLoaiphong.Texts != "" && cboMaks.Texts != "" && cboTrangthai.Texts != "")
             {
-
-
-                DTO_KhachSan dt = new DTO_KhachSan(txtMaks.Texts, txtTenks.Texts, txtDiaChi.Texts, Convert.ToInt32(txtSoPhong.Texts), cboMakv.Texts); ;
-                if (bus.suaKhachSan(dt))
+                DTO_Phong DT = new DTO_Phong(txtMaphong.Texts, cboLoaiphong.Texts, Convert.ToInt32(txtDongia.Texts), cboTrangthai.Texts, cboMaks.Texts);
+                if (bus.suaPhong(DT))
                 {
                     MessageBox.Show("Sửa thành công");
                 }
                 else
                 {
-                    MessageBox.Show("Sửa ko thành công");
+                    MessageBox.Show("Sửa không thành công");
                 }
             }
             else
             {
-                MessageBox.Show("Xin hãy nhập đầy đủ");
+                MessageBox.Show("Chưa nhập đủ thông tin!");
             }
         }
-
-        private void GUI_SuaKS_Load(object sender, EventArgs e)
-        {
-            //
-            txtMaks.Texts = dt1;
-            txtTenks.Texts = dt2;
-            txtDiaChi.Texts = dt3;
-            txtSoPhong.Texts = dt4;
-            cboMakv.Texts = dt5;
-        }
-
-     
-
-
     }
 }

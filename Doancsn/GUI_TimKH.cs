@@ -27,8 +27,7 @@ namespace Doancsn
         }
         private void btnRefesh_Click(object sender, EventArgs e)
         {
-            GUI_KhachHang kh = new GUI_KhachHang();
-            kh.ShowDialog();
+            dtgvKhachHang.DataSource = busKH.getKhachHang();
         }
         private void GUI_TimKH_Load(object sender, EventArgs e)
         {

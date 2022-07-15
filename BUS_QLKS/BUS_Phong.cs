@@ -15,6 +15,11 @@ namespace BUS_QLKS
         {
             return dao.getPhong();
         }
+        public DataTable getMAKS() { return dao.getMAKS(); }
+        public DataTable getLoaiPhong()
+        {
+            return dao.getPhong();
+        }
         public bool themPhong(DTO_Phong tv)
         {
             return dao.themPhong(tv);

@@ -12,7 +12,7 @@ namespace DTO_QLKS
         private string _PHONG_LOAIPHONG;
         private string _PHONG_MAKS;
         private int _PHONG_DONGIA;
-        private bool _PHONG_TRANGTHAI;
+        private string _PHONG_TRANGTHAI;
 
         public string PHONG_MAPHONG
         {
@@ -29,7 +29,7 @@ namespace DTO_QLKS
             get { return _PHONG_DONGIA; }
             set { _PHONG_DONGIA = value; }
         }
-        public bool PHONG_TRANGTHAI
+        public string PHONG_TRANGTHAI
         {
             get { return _PHONG_TRANGTHAI; }
             set { _PHONG_TRANGTHAI = value; }
@@ -44,7 +44,7 @@ namespace DTO_QLKS
         {
 
         }
-        public DTO_Phong(string maphong, string loaiphong, int dongia, bool trangthai, string maks)
+        public DTO_Phong(string maphong, string loaiphong, int dongia, string trangthai, string maks)
         {
             this.PHONG_MAPHONG = maphong;
             this.PHONG_LOAIPHONG = loaiphong;

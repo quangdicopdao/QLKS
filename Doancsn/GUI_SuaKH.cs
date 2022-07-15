@@ -9,12 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QLKS;
 using BUS_QLKS;
+using System.Runtime.InteropServices;
+
 namespace Doancsn
 {
     public partial class GUI_SuaKH : Form
     {
         BUS_KhachHang bus = new BUS_KhachHang();
         string dt1, dt2, dt3, dt4, dt5;
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         bool d13;
         private void GUI_SuaKH_Load(object sender, EventArgs e)
         {
@@ -26,6 +34,16 @@ namespace Doancsn
 
         }
 
+        private void panelThem_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public GUI_SuaKH(string d1, string d2, bool d3, string d4, string d5)
         {
             InitializeComponent();
@@ -34,7 +52,10 @@ namespace Doancsn
             d13 = d3;
             dt4 = d4;
             dt5 = d5;
-
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

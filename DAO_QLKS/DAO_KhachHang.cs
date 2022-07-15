@@ -28,7 +28,7 @@ namespace DAO_QLKS
                 // Ket noi
                 _conn.Open();
                 // Query string – chú ý TV_ID là giá trị tự tăng dần nên ko cần phải thêm ID
-                string SQL = string.Format("INSERT INTO [KHACHHANG](TENKH,GIOITINH,CCCD,NGAYSINH) VALUES('{0}', '{1}', '{2}','{3}')", tv.KHACHHANG_TENKH, tv.KHACHHANG_GIOITINH, tv.KHACHHANG_CCCD, tv.KHACHHANG_NGAYSINH);
+                string SQL = string.Format("INSERT INTO [KHACHHANG](TENKH,GIOITINH,CCCD,NGAYSINH) VALUES(N'{0}', '{1}', '{2}','{3}')", tv.KHACHHANG_TENKH, tv.KHACHHANG_GIOITINH, tv.KHACHHANG_CCCD, tv.KHACHHANG_NGAYSINH);
                 SqlCommand cmd = new SqlCommand(SQL, _conn);
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
@@ -51,7 +51,7 @@ namespace DAO_QLKS
                 // Ket noi
                 _conn.Open();
                 // Query string
-                string SQL = string.Format("UPDATE [KHACHHANG] SET TENKH = '{0}',GIOITINH = '{1}', CCCD = '{2}',NGAYSINH='{3}' WHERE MAKH = '{4}'", tv.KHACHHANG_TENKH, tv.KHACHHANG_GIOITINH, tv.KHACHHANG_CCCD, tv.KHACHHANG_NGAYSINH, tv.KHACHHANG_MAKH);
+                string SQL = string.Format("UPDATE [KHACHHANG] SET TENKH = N'{0}',GIOITINH = '{1}', CCCD = '{2}',NGAYSINH='{3}' WHERE MAKH = '{4}'", tv.KHACHHANG_TENKH, tv.KHACHHANG_GIOITINH, tv.KHACHHANG_CCCD, tv.KHACHHANG_NGAYSINH, tv.KHACHHANG_MAKH);
                 SqlCommand cmd = new SqlCommand(SQL, _conn);
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)

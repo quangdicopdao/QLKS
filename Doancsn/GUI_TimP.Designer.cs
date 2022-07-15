@@ -31,17 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_TimP));
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBoxFInd = new FontAwesome.Sharp.IconPictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgvPhong = new System.Windows.Forms.DataGridView();
+            this.btnRefesh = new Doancsn.RJButton();
             this.btnAdd = new Doancsn.RJButton();
             this.rjTextBox1 = new Doancsn.RJTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtgvPhong = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFInd)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,6 +55,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.iconPictureBoxFInd);
+            this.panel1.Controls.Add(this.btnRefesh);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.rjTextBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -74,35 +78,27 @@
             this.iconPictureBoxFInd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBoxFInd.TabIndex = 2;
             this.iconPictureBoxFInd.TabStop = false;
+            this.iconPictureBoxFInd.Click += new System.EventHandler(this.iconPictureBoxFInd_Click);
             // 
-            // panel2
+            // btnRefesh
             // 
-            this.panel2.Controls.Add(this.dtgvPhong);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 79);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1234, 497);
-            this.panel2.TabIndex = 1;
-            // 
-            // dtgvPhong
-            // 
-            this.dtgvPhong.BackgroundColor = System.Drawing.Color.Pink;
-            this.dtgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dtgvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvPhong.Location = new System.Drawing.Point(0, 0);
-            this.dtgvPhong.Name = "dtgvPhong";
-            this.dtgvPhong.RowHeadersWidth = 51;
-            this.dtgvPhong.RowTemplate.Height = 24;
-            this.dtgvPhong.Size = new System.Drawing.Size(1234, 497);
-            this.dtgvPhong.TabIndex = 0;
+            this.btnRefesh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefesh.BackColor = System.Drawing.Color.Pink;
+            this.btnRefesh.BgColor = System.Drawing.Color.Pink;
+            this.btnRefesh.BorderColor = System.Drawing.Color.DarkViolet;
+            this.btnRefesh.BorderRadius = 20;
+            this.btnRefesh.BorderSize = 0;
+            this.btnRefesh.FlatAppearance.BorderSize = 0;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Location = new System.Drawing.Point(916, 22);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(150, 40);
+            this.btnRefesh.TabIndex = 1;
+            this.btnRefesh.Text = "Làm mới";
+            this.btnRefesh.TextColor = System.Drawing.Color.White;
+            this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnAdd
             // 
@@ -146,6 +142,36 @@
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dtgvPhong);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 79);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1234, 497);
+            this.panel2.TabIndex = 1;
+            // 
+            // dtgvPhong
+            // 
+            this.dtgvPhong.BackgroundColor = System.Drawing.Color.Pink;
+            this.dtgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Edit,
+            this.Delete});
+            this.dtgvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvPhong.Location = new System.Drawing.Point(0, 0);
+            this.dtgvPhong.Name = "dtgvPhong";
+            this.dtgvPhong.RowHeadersWidth = 51;
+            this.dtgvPhong.RowTemplate.Height = 24;
+            this.dtgvPhong.Size = new System.Drawing.Size(1234, 497);
+            this.dtgvPhong.TabIndex = 0;
+            this.dtgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPhong_CellClick);
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MAPHONG";
@@ -186,21 +212,37 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
-            // Column6
+            // Edit
             // 
-            this.Column6.HeaderText = "Sửa";
-            this.Column6.Image = ((System.Drawing.Image)(resources.GetObject("Column6.Image")));
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
+            this.Edit.HeaderText = "Sửa";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.Width = 125;
             // 
-            // Column7
+            // Delete
             // 
-            this.Column7.HeaderText = "Xóa";
-            this.Column7.Image = ((System.Drawing.Image)(resources.GetObject("Column7.Image")));
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
+            this.Delete.HeaderText = "Xóa";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 125;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Sửa";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 125;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Xóa";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 125;
             // 
             // GUI_TimP
             // 
@@ -228,12 +270,15 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxFInd;
         private RJButton btnAdd;
         private RJTextBox rjTextBox1;
+        private RJButton btnRefesh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewImageColumn Column6;
-        private System.Windows.Forms.DataGridViewImageColumn Column7;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

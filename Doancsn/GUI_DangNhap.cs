@@ -42,5 +42,34 @@ namespace Doancsn
             tc.Show();
             this.Hide();
         }
+
+        private void cbxSaveInfo_CheckedChanged(object sender, EventArgs e)
+        {
+            if(txtUserName.Texts != "" && txtPass.Texts != "")
+            {
+                if(cbxSaveInfo.Checked == true)
+                {
+                    string users = txtUserName.Texts;
+                    string pass = txtPass.Texts;    
+                    Properties.Settings.Default.username = users;
+                    Properties.Settings.Default.password = pass;
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    Properties.Settings.Default.Reset();
+                }
+            }
+        }
+
+        private void GUI_DangNhap_Load(object sender, EventArgs e)
+        {
+            txtUserName.Texts = Properties.Settings.Default.username;
+            txtPass.Texts = Properties.Settings.Default.password;
+            if(Properties.Settings.Default.username != "")
+            {
+                cbxSaveInfo.Checked = true;
+            }
+        }
     }
 }

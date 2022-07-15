@@ -138,6 +138,7 @@
             this.btnAdd.Text = "Thêm ";
             this.btnAdd.TextColor = System.Drawing.Color.White;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cboLoaiPhong
             // 
@@ -148,9 +149,12 @@
             this.cboLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cboLoaiPhong.ForeColor = System.Drawing.Color.DimGray;
             this.cboLoaiPhong.IconColor = System.Drawing.Color.Pink;
+            this.cboLoaiPhong.Items.AddRange(new object[] {
+            "ĐƠN",
+            "ĐÔI"});
             this.cboLoaiPhong.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cboLoaiPhong.ListTextColor = System.Drawing.Color.DimGray;
-            this.cboLoaiPhong.Location = new System.Drawing.Point(167, 209);
+            this.cboLoaiPhong.Location = new System.Drawing.Point(167, 201);
             this.cboLoaiPhong.MinimumSize = new System.Drawing.Size(200, 30);
             this.cboLoaiPhong.Name = "cboLoaiPhong";
             this.cboLoaiPhong.Padding = new System.Windows.Forms.Padding(1);
@@ -167,15 +171,18 @@
             this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cboTrangThai.ForeColor = System.Drawing.Color.DimGray;
             this.cboTrangThai.IconColor = System.Drawing.Color.Pink;
+            this.cboTrangThai.Items.AddRange(new object[] {
+            "ĐÃ ĐẶT",
+            "CHƯA ĐẶT"});
             this.cboTrangThai.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cboTrangThai.ListTextColor = System.Drawing.Color.DimGray;
-            this.cboTrangThai.Location = new System.Drawing.Point(167, 347);
+            this.cboTrangThai.Location = new System.Drawing.Point(167, 337);
             this.cboTrangThai.MinimumSize = new System.Drawing.Size(200, 30);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Padding = new System.Windows.Forms.Padding(1);
             this.cboTrangThai.Size = new System.Drawing.Size(200, 38);
             this.cboTrangThai.TabIndex = 3;
-            this.cboTrangThai.Texts = "";
+            this.cboTrangThai.Texts = "CHƯA ĐẶT";
             // 
             // cboMaks
             // 
@@ -188,7 +195,7 @@
             this.cboMaks.IconColor = System.Drawing.Color.Pink;
             this.cboMaks.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cboMaks.ListTextColor = System.Drawing.Color.DimGray;
-            this.cboMaks.Location = new System.Drawing.Point(167, 406);
+            this.cboMaks.Location = new System.Drawing.Point(167, 399);
             this.cboMaks.MinimumSize = new System.Drawing.Size(200, 30);
             this.cboMaks.Name = "cboMaks";
             this.cboMaks.Padding = new System.Windows.Forms.Padding(1);
@@ -293,6 +300,7 @@
             this.Controls.Add(this.panelThem);
             this.Name = "GUI_Phong";
             this.Text = "GUI_Phong";
+            this.Load += new System.EventHandler(this.GUI_Phong_Load);
             this.panelThem.ResumeLayout(false);
             this.panelThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
