@@ -34,12 +34,12 @@ namespace Doancsn
         {
             if (cbxShowPass.Checked)
             {
-                txtPassNew.PasswordChar = false;
+                txtPassNewAgain.PasswordChar = false;
                 txtPassOld.PasswordChar = false;
             }
             else
             {
-                txtPassNew.PasswordChar = true;
+                txtPassNewAgain.PasswordChar = true;
                 txtPassOld.PasswordChar = true;
             }
         }
@@ -49,10 +49,54 @@ namespace Doancsn
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        public bool Check()
+        {
+            if (txtUserName.Texts == "") 
+            {
+                lbThongBao.Text = "Vui lòng nhập tên đăng nhập !";
+                txtUserName.Focus();
+                return false;
+            }
+            else if(txtPassOld.Texts == "")
+            {
+                lbThongBao.Text = "Vui lòng nhập mật khẩu hiện tại !";
+                txtPassOld.Focus();
+                return false;
+            }
+            else if (txtPassNew.Texts == "")
+            {
+                lbThongBao.Text = "Vui lòng nhập mật khẩu mới !";
+                txtPassNew.Focus();
+                return false;
+            }
+            else if (txtPassNewAgain.Texts == "")
+            {
+                lbThongBao.Text = "Vui lòng nhập lại mật khẩu mới !";
+                txtPassNewAgain.Focus();
+                return false;
+            }
+            else if(txtPassNew.Texts != txtPassNewAgain.Texts)
+            {
+                lbThongBao.Text = "Mật khẩu mới và xác nhận mật khẩu k chính xác !";
+                txtPassNew.Focus();
+                txtPassNewAgain.Select();
+                return false;
+            }
+            return true;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (Check())
+            {
+                try
+                {
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

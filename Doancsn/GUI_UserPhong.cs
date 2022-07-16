@@ -36,7 +36,8 @@ namespace Doancsn
                 for( int j = 0; j < col; j++)
                 {
                     //create new button
-                    RJButton btn = new RJButton();
+                    FontAwesome.Sharp.IconButton btn = new FontAwesome.Sharp.IconButton();
+                    //RJButton btn = new RJButton();
                     btn.Name = string.Format("bt01",i,j);
                     btn.Tag = string.Format("[{0},{1}]",i,j);
                     btn.Text = string.Format("P{0}{1}", i, j+1);
@@ -45,7 +46,12 @@ namespace Doancsn
                     btn.Left = indexLeft;
 
                     indexLeft += 300;
-                    btn.BgColor = Color.FromArgb(154,205, 50);
+                    btn.IconChar = FontAwesome.Sharp.IconChar.User;
+                    btn.IconColor = Color.White;
+                    btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    btn.FlatAppearance.BorderSize = 0;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.BackColor = Color.FromArgb(154,205, 50);
                     btn.ForeColor = Color.White;
 
                     //events click
@@ -53,7 +59,6 @@ namespace Doancsn
                      {
                         
                           GUI_UserDatPhongDichVu dv = new GUI_UserDatPhongDichVu(btn.Text);
-
                                 dv.Show();
                          
                      };

@@ -40,19 +40,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rjDatePicker1 = new RJDatePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rjRadioButton12 = new Doancsn.RJRadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjRadioButton3 = new Doancsn.RJRadioButton();
             this.btnTatCa = new Doancsn.RJRadioButton();
-            this.rjRadioButton11 = new Doancsn.RJRadioButton();
-            this.rjRadioButton10 = new Doancsn.RJRadioButton();
-            this.rjRadioButton6 = new Doancsn.RJRadioButton();
-            this.rjRadioButton2 = new Doancsn.RJRadioButton();
-            this.rjRadioButton9 = new Doancsn.RJRadioButton();
-            this.rjRadioButton5 = new Doancsn.RJRadioButton();
-            this.rjRadioButton1 = new Doancsn.RJRadioButton();
+            this.btnPhongdoi = new Doancsn.RJRadioButton();
+            this.btnPhongdadat = new Doancsn.RJRadioButton();
+            this.btnMoney = new Doancsn.RJRadioButton();
+            this.btnPhongdon = new Doancsn.RJRadioButton();
+            this.btnPhongtrong = new Doancsn.RJRadioButton();
             this.panelCreateRoom = new System.Windows.Forms.Panel();
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.panelClose.SuspendLayout();
@@ -235,39 +231,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.rjRadioButton12);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.rjRadioButton3);
             this.panel1.Controls.Add(this.btnTatCa);
-            this.panel1.Controls.Add(this.rjRadioButton11);
-            this.panel1.Controls.Add(this.rjRadioButton10);
-            this.panel1.Controls.Add(this.rjRadioButton6);
-            this.panel1.Controls.Add(this.rjRadioButton2);
-            this.panel1.Controls.Add(this.rjRadioButton9);
-            this.panel1.Controls.Add(this.rjRadioButton5);
-            this.panel1.Controls.Add(this.rjRadioButton1);
+            this.panel1.Controls.Add(this.btnPhongdoi);
+            this.panel1.Controls.Add(this.btnPhongdadat);
+            this.panel1.Controls.Add(this.btnMoney);
+            this.panel1.Controls.Add(this.btnPhongdon);
+            this.panel1.Controls.Add(this.btnPhongtrong);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 109);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(276, 736);
             this.panel1.TabIndex = 2;
-            // 
-            // rjRadioButton12
-            // 
-            this.rjRadioButton12.AutoSize = true;
-            this.rjRadioButton12.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton12.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton12.Location = new System.Drawing.Point(47, 547);
-            this.rjRadioButton12.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton12.Name = "rjRadioButton12";
-            this.rjRadioButton12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton12.Size = new System.Drawing.Size(93, 21);
-            this.rjRadioButton12.TabIndex = 1;
-            this.rjRadioButton12.Text = "2.000.000";
-            this.rjRadioButton12.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton12.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -276,9 +253,9 @@
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label3.Location = new System.Drawing.Point(17, 393);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 29);
+            this.label3.Size = new System.Drawing.Size(131, 29);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Giá phòng";
+            this.label3.Text = "Trạng thái";
             // 
             // label2
             // 
@@ -302,22 +279,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Trạng thái";
             // 
-            // rjRadioButton3
-            // 
-            this.rjRadioButton3.AutoSize = true;
-            this.rjRadioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjRadioButton3.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton3.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton3.Location = new System.Drawing.Point(50, 328);
-            this.rjRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton3.Name = "rjRadioButton3";
-            this.rjRadioButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton3.Size = new System.Drawing.Size(142, 21);
-            this.rjRadioButton3.TabIndex = 1;
-            this.rjRadioButton3.Text = "Tất cả các phòng";
-            this.rjRadioButton3.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton3.UseVisualStyleBackColor = false;
-            // 
             // btnTatCa
             // 
             this.btnTatCa.AutoSize = true;
@@ -334,112 +295,82 @@
             this.btnTatCa.UnCheckedColor = System.Drawing.Color.Gray;
             this.btnTatCa.UseVisualStyleBackColor = false;
             // 
-            // rjRadioButton11
+            // btnPhongdoi
             // 
-            this.rjRadioButton11.AutoSize = true;
-            this.rjRadioButton11.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton11.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton11.Location = new System.Drawing.Point(47, 511);
-            this.rjRadioButton11.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton11.Name = "rjRadioButton11";
-            this.rjRadioButton11.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton11.Size = new System.Drawing.Size(93, 21);
-            this.rjRadioButton11.TabIndex = 1;
-            this.rjRadioButton11.Text = "1.500.000";
-            this.rjRadioButton11.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton11.UseVisualStyleBackColor = true;
+            this.btnPhongdoi.AutoSize = true;
+            this.btnPhongdoi.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPhongdoi.ForeColor = System.Drawing.Color.White;
+            this.btnPhongdoi.Location = new System.Drawing.Point(50, 287);
+            this.btnPhongdoi.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnPhongdoi.Name = "btnPhongdoi";
+            this.btnPhongdoi.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPhongdoi.Size = new System.Drawing.Size(99, 21);
+            this.btnPhongdoi.TabIndex = 1;
+            this.btnPhongdoi.Text = "Phòng đôi";
+            this.btnPhongdoi.UnCheckedColor = System.Drawing.Color.Gray;
+            this.btnPhongdoi.UseVisualStyleBackColor = true;
             // 
-            // rjRadioButton10
+            // btnPhongdadat
             // 
-            this.rjRadioButton10.AutoSize = true;
-            this.rjRadioButton10.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton10.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton10.Location = new System.Drawing.Point(47, 474);
-            this.rjRadioButton10.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton10.Name = "rjRadioButton10";
-            this.rjRadioButton10.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton10.Size = new System.Drawing.Size(93, 21);
-            this.rjRadioButton10.TabIndex = 1;
-            this.rjRadioButton10.Text = "1.000.000";
-            this.rjRadioButton10.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton10.UseVisualStyleBackColor = true;
+            this.btnPhongdadat.AutoSize = true;
+            this.btnPhongdadat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnPhongdadat.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPhongdadat.ForeColor = System.Drawing.Color.White;
+            this.btnPhongdadat.Location = new System.Drawing.Point(50, 99);
+            this.btnPhongdadat.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnPhongdadat.Name = "btnPhongdadat";
+            this.btnPhongdadat.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPhongdadat.Size = new System.Drawing.Size(118, 21);
+            this.btnPhongdadat.TabIndex = 1;
+            this.btnPhongdadat.Text = "Phòng đã đặt";
+            this.btnPhongdadat.UnCheckedColor = System.Drawing.Color.Gray;
+            this.btnPhongdadat.UseVisualStyleBackColor = false;
             // 
-            // rjRadioButton6
+            // btnMoney
             // 
-            this.rjRadioButton6.AutoSize = true;
-            this.rjRadioButton6.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton6.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton6.Location = new System.Drawing.Point(50, 287);
-            this.rjRadioButton6.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton6.Name = "rjRadioButton6";
-            this.rjRadioButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton6.Size = new System.Drawing.Size(99, 21);
-            this.rjRadioButton6.TabIndex = 1;
-            this.rjRadioButton6.Text = "Phòng đôi";
-            this.rjRadioButton6.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton6.UseVisualStyleBackColor = true;
+            this.btnMoney.AutoSize = true;
+            this.btnMoney.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnMoney.ForeColor = System.Drawing.Color.White;
+            this.btnMoney.Location = new System.Drawing.Point(47, 435);
+            this.btnMoney.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnMoney.Name = "btnMoney";
+            this.btnMoney.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMoney.Size = new System.Drawing.Size(83, 21);
+            this.btnMoney.TabIndex = 1;
+            this.btnMoney.Text = "500.000";
+            this.btnMoney.UnCheckedColor = System.Drawing.Color.Gray;
+            this.btnMoney.UseVisualStyleBackColor = true;
             // 
-            // rjRadioButton2
+            // btnPhongdon
             // 
-            this.rjRadioButton2.AutoSize = true;
-            this.rjRadioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjRadioButton2.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton2.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton2.Location = new System.Drawing.Point(50, 99);
-            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton2.Name = "rjRadioButton2";
-            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton2.Size = new System.Drawing.Size(118, 21);
-            this.rjRadioButton2.TabIndex = 1;
-            this.rjRadioButton2.Text = "Phòng đã đặt";
-            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton2.UseVisualStyleBackColor = false;
+            this.btnPhongdon.AutoSize = true;
+            this.btnPhongdon.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPhongdon.ForeColor = System.Drawing.Color.White;
+            this.btnPhongdon.Location = new System.Drawing.Point(50, 248);
+            this.btnPhongdon.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnPhongdon.Name = "btnPhongdon";
+            this.btnPhongdon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPhongdon.Size = new System.Drawing.Size(103, 21);
+            this.btnPhongdon.TabIndex = 1;
+            this.btnPhongdon.Text = "Phòng đơn";
+            this.btnPhongdon.UnCheckedColor = System.Drawing.Color.Gray;
+            this.btnPhongdon.UseVisualStyleBackColor = true;
             // 
-            // rjRadioButton9
+            // btnPhongtrong
             // 
-            this.rjRadioButton9.AutoSize = true;
-            this.rjRadioButton9.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton9.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton9.Location = new System.Drawing.Point(47, 435);
-            this.rjRadioButton9.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton9.Name = "rjRadioButton9";
-            this.rjRadioButton9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton9.Size = new System.Drawing.Size(83, 21);
-            this.rjRadioButton9.TabIndex = 1;
-            this.rjRadioButton9.Text = "500.000";
-            this.rjRadioButton9.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton9.UseVisualStyleBackColor = true;
-            // 
-            // rjRadioButton5
-            // 
-            this.rjRadioButton5.AutoSize = true;
-            this.rjRadioButton5.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton5.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton5.Location = new System.Drawing.Point(50, 248);
-            this.rjRadioButton5.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton5.Name = "rjRadioButton5";
-            this.rjRadioButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton5.Size = new System.Drawing.Size(103, 21);
-            this.rjRadioButton5.TabIndex = 1;
-            this.rjRadioButton5.Text = "Phòng đơn";
-            this.rjRadioButton5.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton5.UseVisualStyleBackColor = true;
-            // 
-            // rjRadioButton1
-            // 
-            this.rjRadioButton1.AutoSize = true;
-            this.rjRadioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjRadioButton1.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton1.ForeColor = System.Drawing.Color.White;
-            this.rjRadioButton1.Location = new System.Drawing.Point(50, 60);
-            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton1.Name = "rjRadioButton1";
-            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(110, 21);
-            this.rjRadioButton1.TabIndex = 1;
-            this.rjRadioButton1.Text = "Phòng trống";
-            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = false;
+            this.btnPhongtrong.AutoSize = true;
+            this.btnPhongtrong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnPhongtrong.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPhongtrong.ForeColor = System.Drawing.Color.White;
+            this.btnPhongtrong.Location = new System.Drawing.Point(50, 60);
+            this.btnPhongtrong.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnPhongtrong.Name = "btnPhongtrong";
+            this.btnPhongtrong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPhongtrong.Size = new System.Drawing.Size(110, 21);
+            this.btnPhongtrong.TabIndex = 1;
+            this.btnPhongtrong.Text = "Phòng trống";
+            this.btnPhongtrong.UnCheckedColor = System.Drawing.Color.Gray;
+            this.btnPhongtrong.UseVisualStyleBackColor = false;
             // 
             // panelCreateRoom
             // 
@@ -502,20 +433,16 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxFind;
         private RJTextBox rjTextBox1;
         private System.Windows.Forms.Panel panel1;
-        private RJRadioButton rjRadioButton12;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private RJRadioButton btnTatCa;
-        private RJRadioButton rjRadioButton11;
-        private RJRadioButton rjRadioButton10;
-        private RJRadioButton rjRadioButton6;
-        private RJRadioButton rjRadioButton2;
-        private RJRadioButton rjRadioButton9;
-        private RJRadioButton rjRadioButton5;
-        private RJRadioButton rjRadioButton1;
+        private RJRadioButton btnPhongdoi;
+        private RJRadioButton btnPhongdadat;
+        private RJRadioButton btnMoney;
+        private RJRadioButton btnPhongdon;
+        private RJRadioButton btnPhongtrong;
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.Panel panelCreateRoom;
-        private RJRadioButton rjRadioButton3;
     }
 }
