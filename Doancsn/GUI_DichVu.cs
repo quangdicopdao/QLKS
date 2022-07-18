@@ -13,7 +13,9 @@ using BUS_QLKS;
 namespace Doancsn
 {
     public partial class GUI_DichVu : Form
-    {//
+    {/// <summary>
+    /// /
+    /// </summary>
         BUS_DichVu busDV  = new BUS_DichVu();
         public GUI_DichVu()
         {
