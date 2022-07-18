@@ -23,10 +23,7 @@ namespace BUS_QLKS
         {
             return dao.getMatKhau();
         }
-        public DataTable getMAKS()
-        {
-            return dao.getMAKS();
-        }
+        
         public DataTable getPhanQuyen(string data)
         {
             return dao.getPhanQuyen(data);
