@@ -32,7 +32,7 @@ namespace DTO_QLKS
             get { return _THANHVIEN_MAKS; }
             set { _THANHVIEN_MAKS = value; }
         }
-
+        //
         public DTO_ThanhVien() { }
         public DTO_ThanhVien(string tendangnhap, string matkhau, string phanquyen, string maks)
         {
