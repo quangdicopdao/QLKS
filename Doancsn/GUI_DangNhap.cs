@@ -79,7 +79,7 @@ namespace Doancsn
                     us.Show();
                     this.Hide();
                    
-                }
+                }//
                 else if( code == 3)
                 {
                     MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu  !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
