@@ -8,11 +8,16 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
+using DTO_QLKS;
+using BUS_QLKS;
 
 namespace Doancsn
 {
     public partial class GUI_DoiMatKhau : Form
     {
+        BUS_ThanhVien bus = new BUS_ThanhVien();
         public GUI_DoiMatKhau()
         {
             InitializeComponent();
@@ -35,11 +40,13 @@ namespace Doancsn
             if (cbxShowPass.Checked)
             {
                 txtPassNewAgain.PasswordChar = false;
+                txtPassNew.PasswordChar = false;
                 txtPassOld.PasswordChar = false;
             }
             else
             {
                 txtPassNewAgain.PasswordChar = true;
+                txtPassNew.PasswordChar = true;
                 txtPassOld.PasswordChar = true;
             }
         }
@@ -53,31 +60,31 @@ namespace Doancsn
         {
             if (txtUserName.Texts == "") 
             {
-                lbThongBao.Text = "Vui lòng nhập tên đăng nhập !";
+                MessageBox.Show("Vui lòng nhập tên đăng nhập !");
                 txtUserName.Focus();
                 return false;
             }
             else if(txtPassOld.Texts == "")
             {
-                lbThongBao.Text = "Vui lòng nhập mật khẩu hiện tại !";
+                MessageBox.Show("Vui lòng nhập mật khẩu hiện tại !");
                 txtPassOld.Focus();
                 return false;
             }
             else if (txtPassNew.Texts == "")
             {
-                lbThongBao.Text = "Vui lòng nhập mật khẩu mới !";
+                MessageBox.Show("Vui lòng nhập mật khẩu mới !");
                 txtPassNew.Focus();
                 return false;
             }
             else if (txtPassNewAgain.Texts == "")
             {
-                lbThongBao.Text = "Vui lòng nhập lại mật khẩu mới !";
+                MessageBox.Show("Vui lòng nhập lại mật khẩu mới  !");
                 txtPassNewAgain.Focus();
                 return false;
             }
             else if(txtPassNew.Texts != txtPassNewAgain.Texts)
             {
-                lbThongBao.Text = "Mật khẩu mới và xác nhận mật khẩu k chính xác !";
+                MessageBox.Show("Nhập lại mật khẩu k chính xác  !");
                 txtPassNew.Focus();
                 txtPassNewAgain.Select();
                 return false;
@@ -90,7 +97,34 @@ namespace Doancsn
             {
                 try
                 {
-
+                    SqlConnection conn = new SqlConnection();
+                    conn.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True";
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "SP_DoiMatKhau";
+                    cmd.Parameters.Add("@User", SqlDbType.NVarChar).Value = txtUserName.Texts;
+                    cmd.Parameters.Add("@OldPass", SqlDbType.NVarChar).Value = txtPassOld.Texts;
+                    cmd.Parameters.Add("@NewPass", SqlDbType.NVarChar).Value = txtPassNew.Texts;
+                    cmd.Connection = conn;
+                    conn.Open();
+                    SqlDataReader dr;
+                    dr = cmd.ExecuteReader();
+                    dr.Read();
+                    if (dr.GetInt32(0) == 1)
+                    {
+                        MessageBox.Show(dr.GetString(1));
+                        txtPassOld.Texts = "";
+                        txtPassNew.Text = "";
+                        txtPassOld.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show(dr.GetString(1));
+                        txtPassOld.Focus();
+                        txtPassOld.Select();
+                    }
+                    dr.Close();
+                    conn.Close();
                 }
                 catch (Exception ex)
                 {

@@ -15,6 +15,7 @@ namespace BUS_QLKS
         {
             return dao.getDichVu();
         }
+        
         public DataTable getTimKiem(string data)
         {
             return dao.getTimKiem(data);

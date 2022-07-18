@@ -9,17 +9,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-
+using System.Data;
+using System.Data.SqlClient;
 namespace Doancsn
 {
     public partial class GUI_TrangChu : Form
     {
+        string tendn,dangnhap;
         private IconButton currentBtn;
         private Panel leftborderBtn;
         private Form currentChilForm;
         public GUI_TrangChu()
         {
             InitializeComponent();
+            leftborderBtn = new Panel();
+            leftborderBtn.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftborderBtn);
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        public GUI_TrangChu(string ten,string dn)
+        {
+            InitializeComponent();
+            tendn = ten;
+            dangnhap = dn;
             leftborderBtn = new Panel();
             leftborderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftborderBtn);
@@ -160,6 +175,8 @@ namespace Doancsn
             this.Close();
             GUI_DangNhap dn = new GUI_DangNhap();
             dn.Show();
+
+            
         }
 
         private void panelTiltleBar_MouseDown(object sender, MouseEventArgs e)
@@ -186,7 +203,19 @@ namespace Doancsn
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        
+        void PhanQuyen()
+        {
+            if(tendn == "Quản lý")
+            {
+                iconButtonHotel.Visible = false;
+                iconButtonAccount.Visible = false;  
+            }
+        }
+        private void GUI_TrangChu_Load(object sender, EventArgs e)
+        {
+            lbTendn.Text = tendn;
+            lbDangNhap.Text = dangnhap;
+            PhanQuyen();
+        }
     }
 }

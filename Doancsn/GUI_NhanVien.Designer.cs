@@ -362,7 +362,7 @@
             this.ClientSize = new System.Drawing.Size(415, 710);
             this.Controls.Add(this.panelThem);
             this.Name = "GUI_NhanVien";
-            this.Text = "GUI_NhanVien";
+            this.Text = "P";
             this.Load += new System.EventHandler(this.GUI_NhanVien_Load);
             this.panelThem.ResumeLayout(false);
             this.panelThem.PerformLayout();

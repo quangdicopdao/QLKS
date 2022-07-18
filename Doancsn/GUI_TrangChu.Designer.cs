@@ -38,7 +38,7 @@
             this.iconButtonRoom = new FontAwesome.Sharp.IconButton();
             this.iconButtonHotel = new FontAwesome.Sharp.IconButton();
             this.panelUser = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbTendn = new System.Windows.Forms.Label();
             this.btnHome = new FontAwesome.Sharp.IconPictureBox();
             this.panelTiltleBar = new System.Windows.Forms.Panel();
             this.iconButtonClose = new FontAwesome.Sharp.IconButton();
@@ -48,6 +48,7 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelShow = new System.Windows.Forms.Panel();
+            this.lbDangNhap = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelUser.SuspendLayout();
@@ -83,7 +84,7 @@
             this.iconButtonAccount.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonAccount.Location = new System.Drawing.Point(0, 481);
+            this.iconButtonAccount.Location = new System.Drawing.Point(0, 509);
             this.iconButtonAccount.Name = "iconButtonAccount";
             this.iconButtonAccount.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButtonAccount.Size = new System.Drawing.Size(272, 63);
@@ -104,7 +105,7 @@
             this.iconButtonStaff.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonStaff.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonStaff.Location = new System.Drawing.Point(0, 418);
+            this.iconButtonStaff.Location = new System.Drawing.Point(0, 446);
             this.iconButtonStaff.Name = "iconButtonStaff";
             this.iconButtonStaff.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButtonStaff.Size = new System.Drawing.Size(272, 63);
@@ -154,7 +155,7 @@
             this.iconButtonCustomer.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonCustomer.Location = new System.Drawing.Point(0, 355);
+            this.iconButtonCustomer.Location = new System.Drawing.Point(0, 383);
             this.iconButtonCustomer.Name = "iconButtonCustomer";
             this.iconButtonCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButtonCustomer.Size = new System.Drawing.Size(272, 63);
@@ -175,7 +176,7 @@
             this.iconButtonService.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonService.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonService.Location = new System.Drawing.Point(0, 292);
+            this.iconButtonService.Location = new System.Drawing.Point(0, 320);
             this.iconButtonService.Name = "iconButtonService";
             this.iconButtonService.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButtonService.Size = new System.Drawing.Size(272, 63);
@@ -196,7 +197,7 @@
             this.iconButtonRoom.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonRoom.Location = new System.Drawing.Point(0, 229);
+            this.iconButtonRoom.Location = new System.Drawing.Point(0, 257);
             this.iconButtonRoom.Name = "iconButtonRoom";
             this.iconButtonRoom.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButtonRoom.Size = new System.Drawing.Size(272, 63);
@@ -217,7 +218,7 @@
             this.iconButtonHotel.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonHotel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonHotel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonHotel.Location = new System.Drawing.Point(0, 166);
+            this.iconButtonHotel.Location = new System.Drawing.Point(0, 194);
             this.iconButtonHotel.Name = "iconButtonHotel";
             this.iconButtonHotel.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.iconButtonHotel.Size = new System.Drawing.Size(272, 63);
@@ -230,23 +231,24 @@
             // 
             // panelUser
             // 
-            this.panelUser.Controls.Add(this.label2);
+            this.panelUser.Controls.Add(this.lbDangNhap);
+            this.panelUser.Controls.Add(this.lbTendn);
             this.panelUser.Controls.Add(this.btnHome);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUser.Location = new System.Drawing.Point(0, 0);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(272, 166);
+            this.panelUser.Size = new System.Drawing.Size(272, 194);
             this.panelUser.TabIndex = 0;
             // 
-            // label2
+            // lbTendn
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(102, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Admin";
+            this.lbTendn.AutoSize = true;
+            this.lbTendn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbTendn.Location = new System.Drawing.Point(102, 135);
+            this.lbTendn.Name = "lbTendn";
+            this.lbTendn.Size = new System.Drawing.Size(45, 16);
+            this.lbTendn.TabIndex = 1;
+            this.lbTendn.Text = "Admin";
             // 
             // btnHome
             // 
@@ -373,6 +375,16 @@
             this.panelShow.Size = new System.Drawing.Size(996, 623);
             this.panelShow.TabIndex = 3;
             // 
+            // lbDangNhap
+            // 
+            this.lbDangNhap.AutoSize = true;
+            this.lbDangNhap.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbDangNhap.Location = new System.Drawing.Point(102, 164);
+            this.lbDangNhap.Name = "lbDangNhap";
+            this.lbDangNhap.Size = new System.Drawing.Size(45, 16);
+            this.lbDangNhap.TabIndex = 1;
+            this.lbDangNhap.Text = "Admin";
+            // 
             // GUI_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -384,6 +396,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "GUI_TrangChu";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.GUI_TrangChu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelUser.ResumeLayout(false);
@@ -408,7 +421,7 @@
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private System.Windows.Forms.Label lblTitleChildForm;
         private FontAwesome.Sharp.IconPictureBox btnHome;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTendn;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelShow;
         private System.Windows.Forms.Panel panel2;
@@ -418,6 +431,7 @@
         private FontAwesome.Sharp.IconButton iconButtonClose;
         private FontAwesome.Sharp.IconButton iconButtonMaximinze;
         private FontAwesome.Sharp.IconButton iconButtonExit;
+        private System.Windows.Forms.Label lbDangNhap;
     }
 }
 

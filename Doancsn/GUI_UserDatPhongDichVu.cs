@@ -15,10 +15,19 @@ namespace Doancsn
     {
         private string btnText;
         private int dem = 0;
-        public GUI_UserDatPhongDichVu()
+        string row1,row2,row3,row4;
+        DataTable tbHienThi;
+        public GUI_UserDatPhongDichVu(string r1,string r2,string r3,string r4)
         {
             InitializeComponent();
-            
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            row1 = r1;
+            row2 = r2;
+            row3 = r3;
+            row4 = r4;  
         }
 
         public GUI_UserDatPhongDichVu(string data)
@@ -51,6 +60,23 @@ namespace Doancsn
         private void GUI_DatPhongDichVu_Load(object sender, EventArgs e)
         {
             lbRoom.Text = btnText;
+            tbHienThi = new DataTable();
+            tbHienThi.Columns.Add("Tên dịch vụ");
+            tbHienThi.Columns.Add("Giá dịch vụ");
+            tbHienThi.Columns.Add("Số lượng");
+            tbHienThi.Columns.Add("Thành tiền");
+
+            dtgvHienThi.DataSource = tbHienThi;
+            dtgvHienThi.Columns[0].Width = (int)(dtgvHienThi.Width * 0.3);
+            dtgvHienThi.Columns[1].Width = (int)(dtgvHienThi.Width * 0.3);
+            dtgvHienThi.Columns[2].Width = (int)(dtgvHienThi.Width * 0.3);
+
+            DataRow row;
+            row = tbHienThi.NewRow();
+            row[0] = row1;
+            row[1] = row2;
+            row[2] = row3;
+            row[3] = row4;
         }
 
         private void btnNhanPhongThanhToan_Click(object sender, EventArgs e)

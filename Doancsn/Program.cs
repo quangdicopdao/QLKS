@@ -16,7 +16,7 @@ namespace Doancsn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI_User());
+            Application.Run(new GUI_DangNhap());
         }
     }
 }

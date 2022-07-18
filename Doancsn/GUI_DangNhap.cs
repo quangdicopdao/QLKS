@@ -8,7 +8,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data;
+using System.Data.SqlClient;
 namespace Doancsn
 {
     public partial class GUI_DangNhap : Form
@@ -38,9 +39,67 @@ namespace Doancsn
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            GUI_TrangChu tc = new GUI_TrangChu();
-            tc.Show();
-            this.Hide();
+
+            
+
+            SqlConnection conn = new SqlConnection();
+            try
+            {
+                conn.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True";
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SP_AuthoLogin";
+                cmd.Parameters.AddWithValue("@UserName", txtUserName.Texts);
+                cmd.Parameters.AddWithValue("@Password", txtPass.Texts);
+                cmd.Connection = conn;
+                object kq = cmd.ExecuteScalar();
+                int code = Convert.ToInt32(kq);
+                // admin dang nhap form trang chu full
+                if (code == 0)
+                {
+                    MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GUI_TrangChu tc = new GUI_TrangChu("Chủ khách sạn",txtUserName.Texts);
+                    tc.Show();
+                    this.Hide();
+                }
+                // quan ly dang nhap form trang chu chi xu ly khach san minh
+                else if (code == 1)
+                {
+                    MessageBox.Show("Chào mừng quản lý  đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GUI_TrangChu tc = new GUI_TrangChu("Quản lý",txtUserName.Texts);
+                    tc.Show();
+                    this.Hide();
+                }
+                // nhan vien dang nhap ben form user
+                else if (code == 2)
+                {
+                    MessageBox.Show("Chào mừng nhân viên đăng nhập !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GUI_User us = new GUI_User();
+                    us.Show();
+                    this.Hide();
+                   
+                }
+                else if( code == 3)
+                {
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu  !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPass.Texts = "";
+                    txtUserName.Texts = "";
+                    txtUserName.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản không tồn tại !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPass.Texts = "";
+                    txtUserName.Texts = "";
+                    txtUserName.Focus();
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cbxSaveInfo_CheckedChanged(object sender, EventArgs e)

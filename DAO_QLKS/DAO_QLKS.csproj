@@ -47,6 +47,7 @@
     <Compile Include="DAO_KhuVuc.cs" />
     <Compile Include="DAO_NhanVien.cs" />
     <Compile Include="DAO_Phong.cs" />
+    <Compile Include="DAO_ThanhVien.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -25,6 +25,8 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
+        //hien thi theo phan quyen
+        
         //Loai dich vu hien thi all
         public DataTable getLoadTatCa()
         {

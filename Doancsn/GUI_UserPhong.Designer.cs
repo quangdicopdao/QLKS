@@ -30,27 +30,31 @@
         {
             this.panelClose = new System.Windows.Forms.Panel();
             this.iconPictureBoxFind = new FontAwesome.Sharp.IconPictureBox();
-            this.rjTextBox1 = new Doancsn.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
             this.btnMaximize = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rjComboBox1 = new Doancsn.RJComboBox();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rjDatePicker1 = new RJDatePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelCreateRoom = new System.Windows.Forms.Panel();
+            this.lbTrangThai = new System.Windows.Forms.Label();
+            this.rjRadioButton1 = new Doancsn.RJRadioButton();
             this.btnTatCa = new Doancsn.RJRadioButton();
             this.btnPhongdoi = new Doancsn.RJRadioButton();
             this.btnPhongdadat = new Doancsn.RJRadioButton();
+            this.rjRadioButton4 = new Doancsn.RJRadioButton();
+            this.rjRadioButton3 = new Doancsn.RJRadioButton();
+            this.rjRadioButton2 = new Doancsn.RJRadioButton();
             this.btnMoney = new Doancsn.RJRadioButton();
             this.btnPhongdon = new Doancsn.RJRadioButton();
             this.btnPhongtrong = new Doancsn.RJRadioButton();
-            this.panelCreateRoom = new System.Windows.Forms.Panel();
-            this.lbTrangThai = new System.Windows.Forms.Label();
+            this.rjTextBox1 = new Doancsn.RJTextBox();
+            this.rjComboBox1 = new Doancsn.RJComboBox();
+            this.rjDatePicker1 = new RJDatePicker();
             this.panelClose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxFind)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
@@ -92,28 +96,6 @@
             this.iconPictureBoxFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBoxFind.TabIndex = 5;
             this.iconPictureBoxFind.TabStop = false;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.White;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 5;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(598, 62);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "Tìm phòng";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 35);
-            this.rjTextBox1.TabIndex = 4;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -169,25 +151,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chọn giờ";
             // 
-            // rjComboBox1
-            // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.rjComboBox1.BorderColor = System.Drawing.Color.White;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.White;
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(6, 21);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.TabIndex = 0;
-            this.rjComboBox1.Texts = "";
-            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -215,28 +178,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn ngày";
             // 
-            // rjDatePicker1
-            // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.rjDatePicker1.Location = new System.Drawing.Point(8, 21);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(200, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.White;
-            this.rjDatePicker1.TabIndex = 0;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.rjRadioButton1);
             this.panel1.Controls.Add(this.btnTatCa);
             this.panel1.Controls.Add(this.btnPhongdoi);
             this.panel1.Controls.Add(this.btnPhongdadat);
+            this.panel1.Controls.Add(this.rjRadioButton4);
+            this.panel1.Controls.Add(this.rjRadioButton3);
+            this.panel1.Controls.Add(this.rjRadioButton2);
             this.panel1.Controls.Add(this.btnMoney);
             this.panel1.Controls.Add(this.btnPhongdon);
             this.panel1.Controls.Add(this.btnPhongtrong);
@@ -279,6 +233,43 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Trạng thái";
             // 
+            // panelCreateRoom
+            // 
+            this.panelCreateRoom.Controls.Add(this.lbTrangThai);
+            this.panelCreateRoom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCreateRoom.Location = new System.Drawing.Point(276, 109);
+            this.panelCreateRoom.Name = "panelCreateRoom";
+            this.panelCreateRoom.Size = new System.Drawing.Size(992, 736);
+            this.panelCreateRoom.TabIndex = 3;
+            // 
+            // lbTrangThai
+            // 
+            this.lbTrangThai.AutoSize = true;
+            this.lbTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTrangThai.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbTrangThai.Location = new System.Drawing.Point(18, 16);
+            this.lbTrangThai.Name = "lbTrangThai";
+            this.lbTrangThai.Size = new System.Drawing.Size(212, 29);
+            this.lbTrangThai.TabIndex = 3;
+            this.lbTrangThai.Text = "Tất cả các phòng";
+            // 
+            // rjRadioButton1
+            // 
+            this.rjRadioButton1.AutoSize = true;
+            this.rjRadioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.rjRadioButton1.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjRadioButton1.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButton1.Location = new System.Drawing.Point(50, 323);
+            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton1.Name = "rjRadioButton1";
+            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton1.Size = new System.Drawing.Size(142, 21);
+            this.rjRadioButton1.TabIndex = 1;
+            this.rjRadioButton1.Text = "Tất cả các phòng";
+            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton1.UseVisualStyleBackColor = false;
+            this.rjRadioButton1.CheckedChanged += new System.EventHandler(this.btnTatCa_CheckedChanged);
+            // 
             // btnTatCa
             // 
             this.btnTatCa.AutoSize = true;
@@ -294,6 +285,7 @@
             this.btnTatCa.Text = "Tất cả các phòng";
             this.btnTatCa.UnCheckedColor = System.Drawing.Color.Gray;
             this.btnTatCa.UseVisualStyleBackColor = false;
+            this.btnTatCa.CheckedChanged += new System.EventHandler(this.btnTatCa_CheckedChanged);
             // 
             // btnPhongdoi
             // 
@@ -309,6 +301,7 @@
             this.btnPhongdoi.Text = "Phòng đôi";
             this.btnPhongdoi.UnCheckedColor = System.Drawing.Color.Gray;
             this.btnPhongdoi.UseVisualStyleBackColor = true;
+            this.btnPhongdoi.CheckedChanged += new System.EventHandler(this.btnPhongdoi_CheckedChanged);
             // 
             // btnPhongdadat
             // 
@@ -325,6 +318,52 @@
             this.btnPhongdadat.Text = "Phòng đã đặt";
             this.btnPhongdadat.UnCheckedColor = System.Drawing.Color.Gray;
             this.btnPhongdadat.UseVisualStyleBackColor = false;
+            this.btnPhongdadat.CheckedChanged += new System.EventHandler(this.btnPhongdadat_CheckedChanged);
+            // 
+            // rjRadioButton4
+            // 
+            this.rjRadioButton4.AutoSize = true;
+            this.rjRadioButton4.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjRadioButton4.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButton4.Location = new System.Drawing.Point(47, 554);
+            this.rjRadioButton4.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton4.Name = "rjRadioButton4";
+            this.rjRadioButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton4.Size = new System.Drawing.Size(83, 21);
+            this.rjRadioButton4.TabIndex = 1;
+            this.rjRadioButton4.Text = "500.000";
+            this.rjRadioButton4.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton4.UseVisualStyleBackColor = true;
+            // 
+            // rjRadioButton3
+            // 
+            this.rjRadioButton3.AutoSize = true;
+            this.rjRadioButton3.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjRadioButton3.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButton3.Location = new System.Drawing.Point(47, 514);
+            this.rjRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton3.Name = "rjRadioButton3";
+            this.rjRadioButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton3.Size = new System.Drawing.Size(83, 21);
+            this.rjRadioButton3.TabIndex = 1;
+            this.rjRadioButton3.Text = "500.000";
+            this.rjRadioButton3.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton3.UseVisualStyleBackColor = true;
+            // 
+            // rjRadioButton2
+            // 
+            this.rjRadioButton2.AutoSize = true;
+            this.rjRadioButton2.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjRadioButton2.ForeColor = System.Drawing.Color.White;
+            this.rjRadioButton2.Location = new System.Drawing.Point(47, 473);
+            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton2.Name = "rjRadioButton2";
+            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton2.Size = new System.Drawing.Size(83, 21);
+            this.rjRadioButton2.TabIndex = 1;
+            this.rjRadioButton2.Text = "500.000";
+            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton2.UseVisualStyleBackColor = true;
             // 
             // btnMoney
             // 
@@ -355,6 +394,7 @@
             this.btnPhongdon.Text = "Phòng đơn";
             this.btnPhongdon.UnCheckedColor = System.Drawing.Color.Gray;
             this.btnPhongdon.UseVisualStyleBackColor = true;
+            this.btnPhongdon.CheckedChanged += new System.EventHandler(this.btnPhongdon_CheckedChanged);
             // 
             // btnPhongtrong
             // 
@@ -371,26 +411,61 @@
             this.btnPhongtrong.Text = "Phòng trống";
             this.btnPhongtrong.UnCheckedColor = System.Drawing.Color.Gray;
             this.btnPhongtrong.UseVisualStyleBackColor = false;
+            this.btnPhongtrong.CheckedChanged += new System.EventHandler(this.btnPhongtrong_CheckedChanged);
             // 
-            // panelCreateRoom
+            // rjTextBox1
             // 
-            this.panelCreateRoom.Controls.Add(this.lbTrangThai);
-            this.panelCreateRoom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCreateRoom.Location = new System.Drawing.Point(276, 109);
-            this.panelCreateRoom.Name = "panelCreateRoom";
-            this.panelCreateRoom.Size = new System.Drawing.Size(992, 736);
-            this.panelCreateRoom.TabIndex = 3;
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.White;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 5;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(598, 62);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderText = "Tìm phòng";
+            this.rjTextBox1.Size = new System.Drawing.Size(250, 35);
+            this.rjTextBox1.TabIndex = 4;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
             // 
-            // lbTrangThai
+            // rjComboBox1
             // 
-            this.lbTrangThai.AutoSize = true;
-            this.lbTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTrangThai.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbTrangThai.Location = new System.Drawing.Point(18, 16);
-            this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(131, 29);
-            this.lbTrangThai.TabIndex = 3;
-            this.lbTrangThai.Text = "Trạng thái";
+            this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.rjComboBox1.BorderColor = System.Drawing.Color.White;
+            this.rjComboBox1.BorderSize = 1;
+            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.IconColor = System.Drawing.Color.White;
+            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox1.Location = new System.Drawing.Point(6, 21);
+            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.rjComboBox1.Name = "rjComboBox1";
+            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.rjComboBox1.Size = new System.Drawing.Size(200, 30);
+            this.rjComboBox1.TabIndex = 0;
+            this.rjComboBox1.Texts = "";
+            // 
+            // rjDatePicker1
+            // 
+            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjDatePicker1.BorderSize = 0;
+            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.rjDatePicker1.Location = new System.Drawing.Point(8, 21);
+            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.rjDatePicker1.Name = "rjDatePicker1";
+            this.rjDatePicker1.Size = new System.Drawing.Size(200, 35);
+            this.rjDatePicker1.SkinColor = System.Drawing.Color.White;
+            this.rjDatePicker1.TabIndex = 0;
+            this.rjDatePicker1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             // 
             // GUI_UserPhong
             // 
@@ -444,5 +519,9 @@
         private RJRadioButton btnPhongtrong;
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.Panel panelCreateRoom;
+        private RJRadioButton rjRadioButton1;
+        private RJRadioButton rjRadioButton4;
+        private RJRadioButton rjRadioButton3;
+        private RJRadioButton rjRadioButton2;
     }
 }

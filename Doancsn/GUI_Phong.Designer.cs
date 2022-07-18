@@ -299,7 +299,7 @@
             this.ClientSize = new System.Drawing.Size(414, 526);
             this.Controls.Add(this.panelThem);
             this.Name = "GUI_Phong";
-            this.Text = "GUI_Phong";
+            this.Text = "P";
             this.Load += new System.EventHandler(this.GUI_Phong_Load);
             this.panelThem.ResumeLayout(false);
             this.panelThem.PerformLayout();

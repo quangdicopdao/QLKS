@@ -311,7 +311,7 @@
             this.ClientSize = new System.Drawing.Size(412, 557);
             this.Controls.Add(this.panelThem);
             this.Name = "GUI_KhachHang";
-            this.Text = "GUI_KhachHang";
+            this.Text = "P";
             this.panelThem.ResumeLayout(false);
             this.panelThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();

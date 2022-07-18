@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgvHienThi = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +45,7 @@
             this.btnNhanPhongThanhToan = new Doancsn.RJButton();
             this.btnThemDV = new Doancsn.RJButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvHienThi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxDate)).BeginInit();
@@ -61,7 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dtgvHienThi);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnThemDV);
             this.panel1.Controls.Add(this.label3);
@@ -71,61 +66,20 @@
             this.panel1.Controls.Add(this.iconPictureBoxTime);
             this.panel1.Controls.Add(this.iconPictureBoxDate);
             this.panel1.Controls.Add(this.iconPictureBoxUser);
-            this.panel1.Location = new System.Drawing.Point(56, 114);
+            this.panel1.Location = new System.Drawing.Point(56, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 481);
+            this.panel1.Size = new System.Drawing.Size(890, 537);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dtgvHienThi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(835, 353);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Loại dịch vụ";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên dịch vụ";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Giá";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Số lượng";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Thành tiền";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.dtgvHienThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvHienThi.Location = new System.Drawing.Point(23, 113);
+            this.dtgvHienThi.Name = "dtgvHienThi";
+            this.dtgvHienThi.RowHeadersWidth = 51;
+            this.dtgvHienThi.RowTemplate.Height = 24;
+            this.dtgvHienThi.Size = new System.Drawing.Size(435, 347);
+            this.dtgvHienThi.TabIndex = 2;
             // 
             // label4
             // 
@@ -263,38 +217,38 @@
             // 
             // rjButton2
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.White;
-            this.rjButton2.BgColor = System.Drawing.Color.White;
+            this.rjButton2.BackColor = System.Drawing.Color.ForestGreen;
+            this.rjButton2.BgColor = System.Drawing.Color.ForestGreen;
             this.rjButton2.BorderColor = System.Drawing.Color.DarkViolet;
             this.rjButton2.BorderRadius = 20;
             this.rjButton2.BorderSize = 0;
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.Black;
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
             this.rjButton2.Location = new System.Drawing.Point(803, 614);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(162, 45);
             this.rjButton2.TabIndex = 1;
             this.rjButton2.Text = "Lưu";
-            this.rjButton2.TextColor = System.Drawing.Color.Black;
+            this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
             // 
             // btnNhanPhongThanhToan
             // 
-            this.btnNhanPhongThanhToan.BackColor = System.Drawing.Color.White;
-            this.btnNhanPhongThanhToan.BgColor = System.Drawing.Color.White;
+            this.btnNhanPhongThanhToan.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnNhanPhongThanhToan.BgColor = System.Drawing.Color.ForestGreen;
             this.btnNhanPhongThanhToan.BorderColor = System.Drawing.Color.DarkViolet;
             this.btnNhanPhongThanhToan.BorderRadius = 20;
             this.btnNhanPhongThanhToan.BorderSize = 0;
             this.btnNhanPhongThanhToan.FlatAppearance.BorderSize = 0;
             this.btnNhanPhongThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanPhongThanhToan.ForeColor = System.Drawing.Color.Black;
+            this.btnNhanPhongThanhToan.ForeColor = System.Drawing.Color.White;
             this.btnNhanPhongThanhToan.Location = new System.Drawing.Point(617, 614);
             this.btnNhanPhongThanhToan.Name = "btnNhanPhongThanhToan";
             this.btnNhanPhongThanhToan.Size = new System.Drawing.Size(162, 45);
             this.btnNhanPhongThanhToan.TabIndex = 1;
             this.btnNhanPhongThanhToan.Text = "Nhận phòng";
-            this.btnNhanPhongThanhToan.TextColor = System.Drawing.Color.Black;
+            this.btnNhanPhongThanhToan.TextColor = System.Drawing.Color.White;
             this.btnNhanPhongThanhToan.UseVisualStyleBackColor = false;
             this.btnNhanPhongThanhToan.Click += new System.EventHandler(this.btnNhanPhongThanhToan_Click);
             // 
@@ -308,7 +262,7 @@
             this.btnThemDV.FlatAppearance.BorderSize = 0;
             this.btnThemDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemDV.ForeColor = System.Drawing.Color.White;
-            this.btnThemDV.Location = new System.Drawing.Point(713, 68);
+            this.btnThemDV.Location = new System.Drawing.Point(312, 466);
             this.btnThemDV.Name = "btnThemDV";
             this.btnThemDV.Size = new System.Drawing.Size(146, 41);
             this.btnThemDV.TabIndex = 1;
@@ -318,7 +272,7 @@
             this.btnThemDV.Visible = false;
             this.btnThemDV.Click += new System.EventHandler(this.btnThemDV_Click);
             // 
-            // GUI_DatPhongDichVu
+            // GUI_UserDatPhongDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,12 +283,12 @@
             this.Controls.Add(this.btnNhanPhongThanhToan);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GUI_DatPhongDichVu";
+            this.Name = "GUI_UserDatPhongDichVu";
             this.Text = "GUI_DatPhongDichVu";
             this.Load += new System.EventHandler(this.GUI_DatPhongDichVu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvHienThi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxDate)).EndInit();
@@ -362,11 +316,6 @@
         private System.Windows.Forms.Label lbRoom;
         private FontAwesome.Sharp.IconButton iconButtonPrevious;
         private System.Windows.Forms.Panel panelTitle;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridView dtgvHienThi;
     }
 }

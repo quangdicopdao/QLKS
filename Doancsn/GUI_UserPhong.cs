@@ -41,14 +41,16 @@ namespace Doancsn
                     btn.Name = string.Format("bt01",i,j);
                     btn.Tag = string.Format("[{0},{1}]",i,j);
                     btn.Text = string.Format("P{0}{1}", i, j+1);
+                    btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
                     btn.Size = new Size(285, 142);
                     btn.Top = indexTop;
                     btn.Left = indexLeft;
 
                     indexLeft += 300;
-                    btn.IconChar = FontAwesome.Sharp.IconChar.User;
+                    btn.IconChar = FontAwesome.Sharp.IconChar.CircleCheck;
                     btn.IconColor = Color.White;
                     btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    btn.IconSize = 60;
                     btn.FlatAppearance.BorderSize = 0;
                     btn.FlatStyle = FlatStyle.Flat;
                     btn.BackColor = Color.FromArgb(154,205, 50);
@@ -60,7 +62,8 @@ namespace Doancsn
                         
                           GUI_UserDatPhongDichVu dv = new GUI_UserDatPhongDichVu(btn.Text);
                                 dv.Show();
-                         
+                         btn.IconChar = FontAwesome.Sharp.IconChar.User;
+                         btn.BackColor = Color.DarkGray;
                      };
                     
                    
@@ -102,6 +105,60 @@ namespace Doancsn
             this.Close();
             GUI_User nd = new GUI_User();
             nd.Show();
+        }
+        // thay doi label
+        void changeLabel()
+        {
+            if(btnPhongtrong.Checked == true)
+            {
+                lbTrangThai.Text = btnPhongtrong.Text;
+            }
+            else if (btnPhongdadat.Checked == true)
+            {
+                lbTrangThai.Text = btnPhongdadat.Text;
+            }
+            else if (btnPhongtrong.Checked == true)
+            {
+                lbTrangThai.Text = btnPhongtrong.Text;
+            }
+            else if (btnPhongdon.Checked == true)
+            {
+                lbTrangThai.Text = btnPhongdon.Text;
+            }
+            else if (btnPhongdoi.Checked == true)
+            {
+                lbTrangThai.Text = btnPhongdoi.Text;
+            }
+            else if(btnTatCa.Checked == true)
+            {
+                lbTrangThai.Text = btnTatCa.Text;
+            }
+            
+        }
+
+        private void btnPhongtrong_CheckedChanged(object sender, EventArgs e)
+        {
+            changeLabel();
+        }
+
+        private void btnPhongdadat_CheckedChanged(object sender, EventArgs e)
+        {
+            changeLabel();
+        }
+
+        private void btnTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            changeLabel();
+        }
+
+        private void btnPhongdon_CheckedChanged(object sender, EventArgs e)
+        {
+            changeLabel();
+        }
+
+        private void btnPhongdoi_CheckedChanged(object sender, EventArgs e)
+        {
+            changeLabel();
         }
 
         

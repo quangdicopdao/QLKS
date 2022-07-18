@@ -17,6 +17,14 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
+        //load nhan vien theo maks
+        public DataTable loadNhanVienTheoKS(string data)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM [NHANVIEN] WHERE MAKS = '"+data+"'", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public DataTable getNhanVien()
         {
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM [NHANVIEN]", _conn);

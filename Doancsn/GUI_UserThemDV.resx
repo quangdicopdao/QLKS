@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Soluong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ThanhTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Add.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -152,37 +152,6 @@
         +8otu7bvmvFtoVC7cwFPQACHkxNgmt/XiicANgRwwtpgqYihuuuYSbRUqD99ZzsxAVyTDtqXoZlGK/0q
         xu3jrFDTY4bGCkn+EvDzFryHOJOvAnWRRtBD9F4jywZPQHqNxQ9pH5r+daRQu3MhfUjw01O2Q0jNbceC
         GRo1gx0AbKcpfPk790ov5WkqQtqE5voAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Soluong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ThanhTien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewImageColumn1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABcAAAAQCAMAAADK8RQqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABjFBMVEX39/f29vb29/f29PT5///w3N/u
-        0NXx3N/6///3+Pfz8fL1+vn08vPgm6XSVWjMPVLLN03RVWfhnKb1+vr18/Tv3+HSVGfHJT3JLUTHJz/H
-        KUHHJj7QUmXv3uD1+/r18/P2+fjy6uzQTGDGJDzHKEDJLkXYanvYanrHIzzPS1/x6er4///bf43GIDnQ
-        Sl7bdoXilaHy09jloKrbd4bGHzjaf4329fX4/Pvx4OLLOE7JMEfMPFLy09fmo63fh5Tmoqzy1NjNP1TL
-        OU/x4OPnsbnMOlDGIjvjlqHXaXrTV2rXZnfUWmzXaXnjlaHGIjrmsbn28/ThlqHHKD/lnqjdgY/df43c
-        fYvegpDdgI7lnqnhlqLknajbeIbbeIfceoncfIrmsLnce4nLNUvkm6bcfIvce4rdfo3ZfovIK0LnprDT
-        VmjYa3zQTmHEGzXhj5vuxcvorbbqsrrFHDXPTWDx6evw3+LRU2bFHjfJLUXLNUzLNkzRU2Xu3eDz8vLg
-        nKbRVGfKNErLOk/hnaf///8f2ynJAAAACXBIWXMAAA68AAAOvAGVvHJJAAAAB3RJTUUH5gcIEQ03a6q0
-        xQAAATNJREFUKFNjYGAEIiZmJhYGVjZ2Jg5OZiZGoBAUcnHz8PLxC/ALCnEJcwH5QLUgQkRYVExcQlJK
-        UkJaRlZOHqwWKM6ooKikrKKqpq6uqqKhqaUAVAkWZ9bW0dXTNzA0MjQwVjIx1WYGm81gZm5haWVtY6tv
-        p2/v4Gjl5GxuBlLOwMziIunq5u7h6eXt4+vnKunPAtQAFA/gCBR3CgoOCQ0Lj4gMchKP4ghAiEtGh8XE
-        xsVHSzqJB4LFGRiZWRIkIeKJIHFJFxZmoGoGRjNzZ8skyeSU1MS01GTJJAELczOwONCd6dIZmcZZ2Z76
-        mRnSOhB3QvyVk5uXX1BYkJ9XVFwC8RcIisiVlpVXVFZVVZRX14DCAWwvUIaLu7au3qmhsb6pFhxuMAgK
-        ZyZ2NlYgCQ5nRgYAwxQ3IGujc5cAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

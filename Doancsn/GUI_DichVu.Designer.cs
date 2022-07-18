@@ -278,7 +278,7 @@
             this.ClientSize = new System.Drawing.Size(477, 554);
             this.Controls.Add(this.panel3);
             this.Name = "GUI_DichVu";
-            this.Text = "GUI_NhanVien";
+            this.Text = "P";
             this.Load += new System.EventHandler(this.GUI_DichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxService)).EndInit();

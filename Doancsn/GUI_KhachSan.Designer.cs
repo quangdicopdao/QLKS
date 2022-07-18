@@ -300,7 +300,7 @@
             this.ClientSize = new System.Drawing.Size(413, 527);
             this.Controls.Add(this.panelThem);
             this.Name = "GUI_KhachSan";
-            this.Text = "GUI_KhachSan";
+            this.Text = "P";
             this.Load += new System.EventHandler(this.GUI_KhachSan_Load);
             this.panelThem.ResumeLayout(false);
             this.panelThem.PerformLayout();
