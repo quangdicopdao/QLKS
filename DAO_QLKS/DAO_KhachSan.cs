@@ -15,7 +15,7 @@ namespace DAO_QLKS
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM [KHACHSAN]", _conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            return dt;//
+            return dt;
         }
         public DataTable getTimKiem(string data)
         {
