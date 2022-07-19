@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32421.90
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1972
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_QLKS", "Doancsn\GUI_QLKS.csproj", "{9019EA77-ADB1-42B8-84C0-10740B6C9BA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doancsn", "Doancsn\Doancsn.csproj", "{9019EA77-ADB1-42B8-84C0-10740B6C9BA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_QLKS", "DTO_QLKS\DTO_QLKS.csproj", "{D81759DF-4201-4188-B6A6-1E9B7437F6EF}"
 EndProject
