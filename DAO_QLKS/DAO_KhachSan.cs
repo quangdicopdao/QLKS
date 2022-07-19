@@ -39,7 +39,15 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
-            
+        //get MAKS
+        //
+        public DataTable getMAKS()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT MAKS FROM [KHACHSAN]", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         /// Thêm Khách sạn
 
         public bool themKhachSan(DTO_KhachSan tv)

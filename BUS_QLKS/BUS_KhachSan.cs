@@ -27,6 +27,10 @@ namespace BUS_QLKS
         {
             return dao.getSoPhong();
         }
+        public DataTable getMaks()
+        {
+            return dao.getMAKS();
+        }
         public bool themKhachSan(DTO_KhachSan tv)
         {
             return dao.themKhachSan(tv);

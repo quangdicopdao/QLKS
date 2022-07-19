@@ -18,8 +18,23 @@ namespace DAO_QLKS
             return dt;
 
         }
+        // get makh
 
-
+        public DataTable getMakh()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Makh FROM KHACHHANG", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        // get info khach hang theo makh
+        public DataTable getInfoKH(string data)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM KHACHHANG WHERE MAKH ='"+data+"'", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         //Them
         public bool themKhachHang(DTO_KhachHang tv)
         {

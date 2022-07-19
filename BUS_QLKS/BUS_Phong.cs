@@ -20,6 +20,10 @@ namespace BUS_QLKS
         {
             return dao.getPhong();
         }
+        public DataTable getInfoDatPhong(string data)
+        {
+            return dao.getInfoDatPhong(data);
+        }
         public bool themPhong(DTO_Phong tv)
         {
             return dao.themPhong(tv);

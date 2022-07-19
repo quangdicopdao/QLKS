@@ -247,7 +247,7 @@
             this.lbTrangThai.AutoSize = true;
             this.lbTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTrangThai.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbTrangThai.Location = new System.Drawing.Point(18, 16);
+            this.lbTrangThai.Location = new System.Drawing.Point(6, 3);
             this.lbTrangThai.Name = "lbTrangThai";
             this.lbTrangThai.Size = new System.Drawing.Size(212, 29);
             this.lbTrangThai.TabIndex = 3;
@@ -329,9 +329,9 @@
             this.rjRadioButton4.MinimumSize = new System.Drawing.Size(0, 21);
             this.rjRadioButton4.Name = "rjRadioButton4";
             this.rjRadioButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton4.Size = new System.Drawing.Size(83, 21);
+            this.rjRadioButton4.Size = new System.Drawing.Size(93, 21);
             this.rjRadioButton4.TabIndex = 1;
-            this.rjRadioButton4.Text = "500.000";
+            this.rjRadioButton4.Text = "2.000.000";
             this.rjRadioButton4.UnCheckedColor = System.Drawing.Color.Gray;
             this.rjRadioButton4.UseVisualStyleBackColor = true;
             // 
@@ -344,9 +344,9 @@
             this.rjRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
             this.rjRadioButton3.Name = "rjRadioButton3";
             this.rjRadioButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton3.Size = new System.Drawing.Size(83, 21);
+            this.rjRadioButton3.Size = new System.Drawing.Size(93, 21);
             this.rjRadioButton3.TabIndex = 1;
-            this.rjRadioButton3.Text = "500.000";
+            this.rjRadioButton3.Text = "1.500.000";
             this.rjRadioButton3.UnCheckedColor = System.Drawing.Color.Gray;
             this.rjRadioButton3.UseVisualStyleBackColor = true;
             // 
@@ -359,9 +359,9 @@
             this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
             this.rjRadioButton2.Name = "rjRadioButton2";
             this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton2.Size = new System.Drawing.Size(83, 21);
+            this.rjRadioButton2.Size = new System.Drawing.Size(93, 21);
             this.rjRadioButton2.TabIndex = 1;
-            this.rjRadioButton2.Text = "500.000";
+            this.rjRadioButton2.Text = "1.000.000";
             this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
             this.rjRadioButton2.UseVisualStyleBackColor = true;
             // 
@@ -444,6 +444,31 @@
             this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
             this.rjComboBox1.IconColor = System.Drawing.Color.White;
+            this.rjComboBox1.Items.AddRange(new object[] {
+            "1:00",
+            "2:00",
+            "3:00",
+            "4:00",
+            "5:00",
+            "6:00",
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+            "24:00"});
             this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
             this.rjComboBox1.Location = new System.Drawing.Point(6, 21);

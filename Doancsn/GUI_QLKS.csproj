@@ -86,12 +86,6 @@
     <Compile Include="GUI_SuaP.Designer.cs">
       <DependentUpon>GUI_SuaP.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_UserDatPhongDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI_UserDatPhongDichVu.Designer.cs">
-      <DependentUpon>GUI_UserDatPhongDichVu.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI_DoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_SuaP.resx">
       <DependentUpon>GUI_SuaP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI_UserDatPhongDichVu.resx">
-      <DependentUpon>GUI_UserDatPhongDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_DoiMatKhau.resx">
       <DependentUpon>GUI_DoiMatKhau.cs</DependentUpon>

@@ -60,7 +60,7 @@ namespace Doancsn
                     btn.Click += (sender1, args) =>
                      {
                         
-                          GUI_UserDatPhongDichVu dv = new GUI_UserDatPhongDichVu(btn.Text);
+                          GUI_UserThemDV dv = new GUI_UserThemDV(btn.Text);
                                 dv.Show();
                          btn.IconChar = FontAwesome.Sharp.IconChar.User;
                          btn.BackColor = Color.DarkGray;
@@ -77,7 +77,7 @@ namespace Doancsn
         
         private void GUI_UserPhong_Load(object sender, EventArgs e)
         {
-            CreateButtonRoom(4,4 );
+            CreateButtonRoom(5,5 );
         }
 
         private void panelClose_MouseDown(object sender, MouseEventArgs e)

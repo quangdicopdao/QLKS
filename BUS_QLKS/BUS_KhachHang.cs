@@ -15,6 +15,14 @@ namespace BUS_QLKS
         {
             return dao.getKhachHang();
         }
+        public DataTable getMakh()
+        {
+            return dao.getMakh();
+        }
+        public DataTable getInfoKH(string data)
+        {
+            return dao.getInfoKH(data);
+                }
         public bool themKhachHang(DTO_KhachHang tv)
         {
             return dao.themKhachHang(tv);

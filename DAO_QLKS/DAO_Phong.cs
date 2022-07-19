@@ -33,6 +33,14 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
+        //get info 
+        public DataTable getInfoDatPhong(string data)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM DATPHONG WHERE MAPHONG = '"+data+"'",_conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         /// Thêm Khách sạn
 
         public bool themPhong(DTO_Phong tv)

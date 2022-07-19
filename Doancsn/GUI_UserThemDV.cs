@@ -15,11 +15,15 @@ namespace Doancsn
 {
     public partial class GUI_UserThemDV : Form
     {
-        string lbText;
+        string lbText,makh;
         int dem = 0;
         DataTable tbChondv;
         string row1,row2,row3,row4;
-        BUS_DichVu bus = new BUS_DichVu();
+        BUS_KhachHang busKH = new BUS_KhachHang();
+        BUS_DichVu busDV = new BUS_DichVu();
+        BUS_KhachSan busKS = new BUS_KhachSan();
+        BUS_HoaDon busHD = new BUS_HoaDon();
+        BUS_Phong busP = new BUS_Phong();
         public GUI_UserThemDV()
         {
             InitializeComponent();
@@ -45,8 +49,7 @@ namespace Doancsn
         private void iconButtonPrevious_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GUI_UserDatPhongDichVu pdv = new GUI_UserDatPhongDichVu(row1,row2,row3,row4);
-            pdv.ShowDialog();
+            
         }
 
         private void panelTitle_MouseDown(object sender, MouseEventArgs e)
@@ -57,7 +60,10 @@ namespace Doancsn
 
         private void GUI_UserThemDV_Load(object sender, EventArgs e)
         {
-            dtgvThemDV.DataSource = bus.getLoadTatCa();
+            loadInfo();
+            loadDatPhong();
+            lbRoom.Text = lbText;
+            dtgvThemDV.DataSource = busDV.getLoadTatCa();
             //add datatable
             tbChondv = new DataTable();
             tbChondv.Columns.Add("Tên dịch vụ");
@@ -72,14 +78,100 @@ namespace Doancsn
             dtgvChonDV.Columns[3].Width = (int)(dtgvChonDV.Width * 0.2);
         }
 
+        private void btnNhanPhong_Click(object sender, EventArgs e)
+        {
+            btnThanhToan.Visible = true;
+            btnSave.Visible = true;
+            btnNhanPhong.Visible = false;
+        }
+        void loadDatPhong()
+        {
+            txtMaphong.Texts = lbText;
+
+            //GET MAHD
+            cboMahd.DisplayMember = "MAHD";
+            cboMahd.ValueMember = "MAHD";
+            cboMahd.DataSource = busHD.getMahd();
+            //GET MAKH
+            cboMakh.DisplayMember = "MAKH";
+            cboMakh.ValueMember = "MAKH";
+            cboMakh.DataSource = busKH.getMakh();
+            // get dpmakh
+            cboDPMakh.DisplayMember = "MAKH";
+            cboDPMakh.ValueMember = "MAKH";
+            cboDPMakh.DataSource = busKH.getMakh();
+        }
+        void loadInfo()
+        {
+            DataTable dt = busKH.getInfoKH(cboMakh.Texts);
+            DataTable dp = busP.getInfoDatPhong(lbText);
+            if (dp.Rows.Count > 0)
+            {
+                cboDPMakh.Texts = dp.Rows[0]["MAKH"].ToString();
+                dpkNgaydat.Text = dp.Rows[0]["NGAYDATPHONG"].ToString();
+                dpkNgaydat.Text = dp.Rows[0]["NGAYTRAPHONG"].ToString();
+                cboGioNhan.Texts =dp.Rows[0]["GIODATPHONG"].ToString();
+                cboGioTra.Texts = dp.Rows[0]["GIOTRAPHONG"].ToString();
+            }
+            if (dt.Rows.Count > 0)
+            {
+                txtTenkh.Texts = dt.Rows[0]["TENKH"].ToString();
+                txtCCCD.Texts = dt.Rows[0]["CCCD"].ToString();
+                dpkNgaysinh.Text = dt.Rows[0]["NGAYSINH"].ToString();
+
+            }
+        }
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            //loadDatPhong();
+            loadInfo();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedIndex == 0)
+            {
+                //save info customer
+                if(btnNam.Checked == true)
+                {
+                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, true, txtCCCD.Texts, dpkNS.Text);
+                    if (busKH.themKhachHang(dt))
+                    {
+                        MessageBox.Show("Thêm khách hàng thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm khách hàng không thành công!");
+                    }
+                }
+                else if(btnNu.Checked == true)
+                {
+                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, false, txtCCCD.Texts, dpkNS.Text);
+                    if (busKH.themKhachHang(dt))
+                    {
+                        MessageBox.Show("Thêm khách hàng thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm khách hàng không thành công!");
+                    }
+                }
+                
+            }
+            else
+            {
+
+            }
+        }
+
         private void cboLoaidv_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cboLoaidv.SelectedIndex == 0)
             {
-                dtgvThemDV.DataSource = bus.getLoadTatCa();
+                dtgvThemDV.DataSource = busDV.getLoadTatCa();
             }
             else{
-                dtgvThemDV.DataSource = bus.getThemdv(cboLoaidv.Text);
+                dtgvThemDV.DataSource = busDV.getThemdv(cboLoaidv.Text);
             }
         }
 

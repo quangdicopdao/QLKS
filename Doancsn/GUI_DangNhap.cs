@@ -58,7 +58,6 @@ namespace Doancsn
                 // admin dang nhap form trang chu full
                 if (code == 0)
                 {
-                    MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     GUI_TrangChu tc = new GUI_TrangChu("Chủ khách sạn",txtUserName.Texts);
                     tc.Show();
                     this.Hide();
@@ -66,7 +65,6 @@ namespace Doancsn
                 // quan ly dang nhap form trang chu chi xu ly khach san minh
                 else if (code == 1)
                 {
-                    MessageBox.Show("Chào mừng quản lý  đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     GUI_TrangChu tc = new GUI_TrangChu("Quản lý",txtUserName.Texts);
                     tc.Show();
                     this.Hide();
@@ -74,7 +72,6 @@ namespace Doancsn
                 // nhan vien dang nhap ben form user
                 else if (code == 2)
                 {
-                    MessageBox.Show("Chào mừng nhân viên đăng nhập !!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     GUI_User us = new GUI_User();
                     us.Show();
                     this.Hide();
