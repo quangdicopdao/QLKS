@@ -8,6 +8,6 @@ namespace DAO_QLKS
 {
     public class DBConnect
     {
-        protected SqlConnection _conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
+        protected SqlConnection _conn = new SqlConnection(@"Data Source=DESKTOP-T8VO5NK\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
     }
 }
