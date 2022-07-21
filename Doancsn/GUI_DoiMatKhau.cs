@@ -132,5 +132,10 @@ namespace Doancsn
                 }
             }
         }
+
+        private void GUI_DoiMatKhau_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

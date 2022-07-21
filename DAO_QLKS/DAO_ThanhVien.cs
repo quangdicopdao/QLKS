@@ -35,9 +35,9 @@ namespace DAO_QLKS
             return dt;
         }
         //GET MAKS
-        public DataTable getMAKS(string data)
+        public DataTable getMAKS()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT MAKS FROM [THANHVIEN] WHERE TENDANGNHAP = '"+data+"'", _conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT MAKS FROM [THANHVIEN]", _conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -84,7 +84,7 @@ namespace DAO_QLKS
             try
             {
                 _conn.Open();
-                string SQL = string.Format("UPDATE [THANHVIEN] SET MATKHAU = '{0}',PHANQUYEN = N'{1}', MAKS = '{2}' WHERE TENDANGNHAP = '{3}'", us.THANHVIEN_MATKHAU, us.THANHVIEN_PHANQUYEN, us.THANHVIEN_MAKS, us.THANHVIEN_TENDANGNHAP);
+                string SQL = string.Format("UPDATE [THANHVIEN] SET TENDANGNHAP = '{0}', MATKHAU = '{1}', PHANQUYEN = '{2}' WHERE MAKS = '{3}'", us.THANHVIEN_TENDANGNHAP,us.THANHVIEN_MATKHAU, us.THANHVIEN_PHANQUYEN, us.THANHVIEN_MAKS);
                 SqlCommand cmd = new SqlCommand(SQL, _conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -101,12 +101,12 @@ namespace DAO_QLKS
             return false;
         }
         //XOA USER
-        public bool xoaThanhVien(string name)
+        public bool xoaThanhVien(string Id)
         {
             try
             {
                 _conn.Open();
-                string SQL = string.Format("DELETE FROM[THANHVIEN] WHERE TENDANGNHAP = '{0}'", name);
+                string SQL = string.Format("DELETE FROM[THANHVIEN] WHERE TENDANGNHAP = '{0}'", Id);
                 SqlCommand cmd = new SqlCommand(SQL, _conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;

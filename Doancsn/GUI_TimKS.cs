@@ -73,5 +73,10 @@ namespace Doancsn
                 DV.ShowDialog();
             }
         }
+
+        private void dtgvKhachSan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

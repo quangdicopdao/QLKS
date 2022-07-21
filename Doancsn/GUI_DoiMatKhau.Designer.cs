@@ -50,8 +50,9 @@
             this.panelTitle.Controls.Add(this.iconButtonClose);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(418, 47);
+            this.panelTitle.Size = new System.Drawing.Size(314, 38);
             this.panelTitle.TabIndex = 0;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -63,9 +64,10 @@
             this.iconButtonClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.iconButtonClose.IconColor = System.Drawing.Color.White;
             this.iconButtonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonClose.Location = new System.Drawing.Point(365, 2);
+            this.iconButtonClose.Location = new System.Drawing.Point(274, 2);
+            this.iconButtonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButtonClose.Name = "iconButtonClose";
-            this.iconButtonClose.Size = new System.Drawing.Size(52, 44);
+            this.iconButtonClose.Size = new System.Drawing.Size(39, 36);
             this.iconButtonClose.TabIndex = 5;
             this.iconButtonClose.UseVisualStyleBackColor = false;
             this.iconButtonClose.Click += new System.EventHandler(this.iconButtonClose_Click);
@@ -74,9 +76,10 @@
             // 
             this.cbxShowPass.AutoSize = true;
             this.cbxShowPass.ForeColor = System.Drawing.Color.White;
-            this.cbxShowPass.Location = new System.Drawing.Point(70, 519);
+            this.cbxShowPass.Location = new System.Drawing.Point(52, 422);
+            this.cbxShowPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxShowPass.Name = "cbxShowPass";
-            this.cbxShowPass.Size = new System.Drawing.Size(114, 20);
+            this.cbxShowPass.Size = new System.Drawing.Size(95, 17);
             this.cbxShowPass.TabIndex = 3;
             this.cbxShowPass.Text = "Hiện mật khẩu";
             this.cbxShowPass.UseVisualStyleBackColor = true;
@@ -88,10 +91,11 @@
             this.iconPictureBoxChangPass.IconChar = FontAwesome.Sharp.IconChar.UnlockAlt;
             this.iconPictureBoxChangPass.IconColor = System.Drawing.Color.White;
             this.iconPictureBoxChangPass.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxChangPass.IconSize = 106;
-            this.iconPictureBoxChangPass.Location = new System.Drawing.Point(116, 53);
+            this.iconPictureBoxChangPass.IconSize = 86;
+            this.iconPictureBoxChangPass.Location = new System.Drawing.Point(87, 43);
+            this.iconPictureBoxChangPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconPictureBoxChangPass.Name = "iconPictureBoxChangPass";
-            this.iconPictureBoxChangPass.Size = new System.Drawing.Size(182, 106);
+            this.iconPictureBoxChangPass.Size = new System.Drawing.Size(136, 86);
             this.iconPictureBoxChangPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBoxChangPass.TabIndex = 4;
             this.iconPictureBoxChangPass.TabStop = false;
@@ -100,9 +104,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(74, 190);
+            this.label1.Location = new System.Drawing.Point(56, 154);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Tên đăng nhập";
             // 
@@ -110,9 +115,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(74, 266);
+            this.label2.Location = new System.Drawing.Point(56, 216);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 16);
+            this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Mật khẩu hiện tại";
             // 
@@ -120,9 +126,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(74, 349);
+            this.label3.Location = new System.Drawing.Point(56, 284);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Mật khẩu mới";
             // 
@@ -130,9 +137,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(74, 434);
+            this.label4.Location = new System.Drawing.Point(56, 353);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 16);
+            this.label4.Size = new System.Drawing.Size(112, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Nhập lại mật khẩu mới";
             // 
@@ -147,9 +155,10 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnSave.Location = new System.Drawing.Point(70, 614);
+            this.btnSave.Location = new System.Drawing.Point(52, 499);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(273, 47);
+            this.btnSave.Size = new System.Drawing.Size(205, 38);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Đổi mật khẩu";
             this.btnSave.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -165,15 +174,14 @@
             this.txtPassNewAgain.BorderSize = 2;
             this.txtPassNewAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassNewAgain.ForeColor = System.Drawing.Color.White;
-            this.txtPassNewAgain.Location = new System.Drawing.Point(70, 454);
-            this.txtPassNewAgain.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassNewAgain.Location = new System.Drawing.Point(52, 369);
             this.txtPassNewAgain.Multiline = false;
             this.txtPassNewAgain.Name = "txtPassNewAgain";
-            this.txtPassNewAgain.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPassNewAgain.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtPassNewAgain.PasswordChar = true;
             this.txtPassNewAgain.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPassNewAgain.PlaceholderText = "";
-            this.txtPassNewAgain.Size = new System.Drawing.Size(273, 35);
+            this.txtPassNewAgain.Size = new System.Drawing.Size(205, 29);
             this.txtPassNewAgain.TabIndex = 3;
             this.txtPassNewAgain.Texts = "";
             this.txtPassNewAgain.UnderlinedStyle = false;
@@ -187,15 +195,14 @@
             this.txtPassNew.BorderSize = 2;
             this.txtPassNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassNew.ForeColor = System.Drawing.Color.White;
-            this.txtPassNew.Location = new System.Drawing.Point(70, 369);
-            this.txtPassNew.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassNew.Location = new System.Drawing.Point(52, 300);
             this.txtPassNew.Multiline = false;
             this.txtPassNew.Name = "txtPassNew";
-            this.txtPassNew.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPassNew.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtPassNew.PasswordChar = true;
             this.txtPassNew.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPassNew.PlaceholderText = "";
-            this.txtPassNew.Size = new System.Drawing.Size(273, 35);
+            this.txtPassNew.Size = new System.Drawing.Size(205, 29);
             this.txtPassNew.TabIndex = 2;
             this.txtPassNew.Texts = "";
             this.txtPassNew.UnderlinedStyle = false;
@@ -209,15 +216,14 @@
             this.txtPassOld.BorderSize = 2;
             this.txtPassOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassOld.ForeColor = System.Drawing.Color.White;
-            this.txtPassOld.Location = new System.Drawing.Point(68, 286);
-            this.txtPassOld.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassOld.Location = new System.Drawing.Point(51, 232);
             this.txtPassOld.Multiline = false;
             this.txtPassOld.Name = "txtPassOld";
-            this.txtPassOld.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPassOld.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtPassOld.PasswordChar = true;
             this.txtPassOld.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPassOld.PlaceholderText = "";
-            this.txtPassOld.Size = new System.Drawing.Size(273, 35);
+            this.txtPassOld.Size = new System.Drawing.Size(205, 29);
             this.txtPassOld.TabIndex = 1;
             this.txtPassOld.Texts = "";
             this.txtPassOld.UnderlinedStyle = false;
@@ -231,25 +237,24 @@
             this.txtUserName.BorderSize = 2;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.White;
-            this.txtUserName.Location = new System.Drawing.Point(68, 210);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName.Location = new System.Drawing.Point(51, 171);
             this.txtUserName.Multiline = false;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUserName.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtUserName.PasswordChar = false;
             this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserName.PlaceholderText = "";
-            this.txtUserName.Size = new System.Drawing.Size(273, 35);
+            this.txtUserName.Size = new System.Drawing.Size(205, 29);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = false;
             // 
             // GUI_DoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(418, 689);
+            this.ClientSize = new System.Drawing.Size(314, 560);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -262,8 +267,10 @@
             this.Controls.Add(this.txtPassOld);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.panelTitle);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GUI_DoiMatKhau";
             this.Text = "GUI_DoiMatKhau";
+            this.Load += new System.EventHandler(this.GUI_DoiMatKhau_Load);
             this.panelTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxChangPass)).EndInit();
             this.ResumeLayout(false);

@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_TimKS));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconPictureBoxFind = new FontAwesome.Sharp.IconPictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgvKhachSan = new System.Windows.Forms.DataGridView();
             this.btnRefesh = new Doancsn.RJButton();
             this.btnAdd = new Doancsn.RJButton();
             this.txtFind = new Doancsn.RJTextBox();
+            this.iconPictureBoxFind = new FontAwesome.Sharp.IconPictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtgvKhachSan = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,55 +58,10 @@
             this.panel1.Controls.Add(this.iconPictureBoxFind);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1234, 79);
+            this.panel1.Size = new System.Drawing.Size(1085, 64);
             this.panel1.TabIndex = 0;
-            // 
-            // iconPictureBoxFind
-            // 
-            this.iconPictureBoxFind.BackColor = System.Drawing.Color.White;
-            this.iconPictureBoxFind.ForeColor = System.Drawing.Color.Orange;
-            this.iconPictureBoxFind.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
-            this.iconPictureBoxFind.IconColor = System.Drawing.Color.Orange;
-            this.iconPictureBoxFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxFind.IconSize = 35;
-            this.iconPictureBoxFind.Location = new System.Drawing.Point(331, 25);
-            this.iconPictureBoxFind.Name = "iconPictureBoxFind";
-            this.iconPictureBoxFind.Size = new System.Drawing.Size(45, 35);
-            this.iconPictureBoxFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBoxFind.TabIndex = 0;
-            this.iconPictureBoxFind.TabStop = false;
-            this.iconPictureBoxFind.Click += new System.EventHandler(this.iconPictureBoxFind_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dtgvKhachSan);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 79);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1234, 497);
-            this.panel2.TabIndex = 1;
-            // 
-            // dtgvKhachSan
-            // 
-            this.dtgvKhachSan.BackgroundColor = System.Drawing.Color.Orange;
-            this.dtgvKhachSan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvKhachSan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Edit,
-            this.Delete});
-            this.dtgvKhachSan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvKhachSan.Location = new System.Drawing.Point(0, 0);
-            this.dtgvKhachSan.Name = "dtgvKhachSan";
-            this.dtgvKhachSan.RowHeadersWidth = 51;
-            this.dtgvKhachSan.RowTemplate.Height = 24;
-            this.dtgvKhachSan.Size = new System.Drawing.Size(1234, 497);
-            this.dtgvKhachSan.TabIndex = 0;
-            this.dtgvKhachSan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKhachSan_CellClick);
             // 
             // btnRefesh
             // 
@@ -119,9 +74,10 @@
             this.btnRefesh.FlatAppearance.BorderSize = 0;
             this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(916, 20);
+            this.btnRefesh.Location = new System.Drawing.Point(846, 16);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(150, 40);
+            this.btnRefesh.Size = new System.Drawing.Size(112, 32);
             this.btnRefesh.TabIndex = 2;
             this.btnRefesh.Text = "Làm mới";
             this.btnRefesh.TextColor = System.Drawing.Color.White;
@@ -139,9 +95,10 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(1072, 20);
+            this.btnAdd.Location = new System.Drawing.Point(963, 16);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 40);
+            this.btnAdd.Size = new System.Drawing.Size(112, 32);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm khách sạn";
             this.btnAdd.TextColor = System.Drawing.Color.White;
@@ -157,18 +114,66 @@
             this.txtFind.BorderSize = 2;
             this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFind.Location = new System.Drawing.Point(49, 25);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFind.Location = new System.Drawing.Point(37, 20);
             this.txtFind.Multiline = false;
             this.txtFind.Name = "txtFind";
-            this.txtFind.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtFind.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtFind.PasswordChar = false;
             this.txtFind.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtFind.PlaceholderText = "Nhập tên khách sạn";
-            this.txtFind.Size = new System.Drawing.Size(275, 35);
+            this.txtFind.Size = new System.Drawing.Size(206, 29);
             this.txtFind.TabIndex = 1;
             this.txtFind.Texts = "";
             this.txtFind.UnderlinedStyle = false;
+            // 
+            // iconPictureBoxFind
+            // 
+            this.iconPictureBoxFind.BackColor = System.Drawing.Color.White;
+            this.iconPictureBoxFind.ForeColor = System.Drawing.Color.Orange;
+            this.iconPictureBoxFind.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.iconPictureBoxFind.IconColor = System.Drawing.Color.Orange;
+            this.iconPictureBoxFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxFind.IconSize = 28;
+            this.iconPictureBoxFind.Location = new System.Drawing.Point(248, 20);
+            this.iconPictureBoxFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconPictureBoxFind.Name = "iconPictureBoxFind";
+            this.iconPictureBoxFind.Size = new System.Drawing.Size(34, 28);
+            this.iconPictureBoxFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBoxFind.TabIndex = 0;
+            this.iconPictureBoxFind.TabStop = false;
+            this.iconPictureBoxFind.Click += new System.EventHandler(this.iconPictureBoxFind_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dtgvKhachSan);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 64);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1085, 404);
+            this.panel2.TabIndex = 1;
+            // 
+            // dtgvKhachSan
+            // 
+            this.dtgvKhachSan.BackgroundColor = System.Drawing.Color.Orange;
+            this.dtgvKhachSan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvKhachSan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Edit,
+            this.Delete});
+            this.dtgvKhachSan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvKhachSan.Location = new System.Drawing.Point(0, 0);
+            this.dtgvKhachSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvKhachSan.Name = "dtgvKhachSan";
+            this.dtgvKhachSan.RowHeadersWidth = 51;
+            this.dtgvKhachSan.RowTemplate.Height = 24;
+            this.dtgvKhachSan.Size = new System.Drawing.Size(1085, 404);
+            this.dtgvKhachSan.TabIndex = 0;
+            this.dtgvKhachSan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvKhachSan_CellClick);
             // 
             // Column1
             // 
@@ -228,11 +233,12 @@
             // 
             // GUI_TimKS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 576);
+            this.ClientSize = new System.Drawing.Size(1085, 468);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GUI_TimKS";
             this.Text = "GUI_TimKS";
             this.Load += new System.EventHandler(this.GUI_TimKS_Load);

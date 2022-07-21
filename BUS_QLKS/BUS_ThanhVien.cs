@@ -32,8 +32,11 @@ namespace BUS_QLKS
         {
             return dao.getMaks(data);
         }
-        
-        
+        public DataTable getMAKS()
+        {
+            return dao.getMAKS();
+        }
+
         public bool themThanhVien(DTO_ThanhVien us)
         {
             return dao.themThanhVien(us);
