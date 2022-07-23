@@ -16,14 +16,14 @@ namespace Doancsn {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class XuatHoaDon : ReportClass {
+    public class Inhoadon : ReportClass {
         
-        public XuatHoaDon() {
+        public Inhoadon() {
         }
         
         public override string ResourceName {
             get {
-                return "XuatHoaDon.rpt";
+                return "Inhoadon.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Doancsn {
         
         public override string FullResourceName {
             get {
-                return "Doancsn.XuatHoaDon.rpt";
+                return "Doancsn.Inhoadon.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Doancsn {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedXuatHoaDon : Component, ICachedReport {
+    public class CachedInhoadon : Component, ICachedReport {
         
-        public CachedXuatHoaDon() {
+        public CachedInhoadon() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Doancsn {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            XuatHoaDon rpt = new XuatHoaDon();
+            Inhoadon rpt = new Inhoadon();
             rpt.Site = this.Site;
             return rpt;
         }

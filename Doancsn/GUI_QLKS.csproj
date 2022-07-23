@@ -74,10 +74,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataCTHoadon.Designer.cs">
+    <Compile Include="DtaHD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataCTHoadon.xsd</DependentUpon>
+      <DependentUpon>DtaHD.xsd</DependentUpon>
     </Compile>
     <Compile Include="GUI_DangNhap.cs">
       <SubType>Form</SubType>
@@ -163,6 +163,12 @@
     <Compile Include="GUI_SuaKS.Designer.cs">
       <DependentUpon>GUI_SuaKS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Test.Designer.cs">
+      <DependentUpon>GUI_Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_UserThemDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,12 @@
     <Compile Include="GUI_UserPhong.Designer.cs">
       <DependentUpon>GUI_UserPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inhoadon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inhoadon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RJCircularPictureBox.cs">
@@ -242,12 +254,6 @@
     </Compile>
     <Compile Include="RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XuatHoaDon.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>XuatHoaDon.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
@@ -291,6 +297,9 @@
     <EmbeddedResource Include="GUI_SuaKS.resx">
       <DependentUpon>GUI_SuaKS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Test.resx">
+      <DependentUpon>GUI_Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_UserThemDV.resx">
       <DependentUpon>GUI_UserThemDV.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +327,10 @@
     <EmbeddedResource Include="GUI_UserPhong.resx">
       <DependentUpon>GUI_UserPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inhoadon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Inhoadon.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -332,20 +345,16 @@
     <EmbeddedResource Include="RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XuatHoaDon.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>XuatHoaDon.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="DataCTHoadon.xsc">
-      <DependentUpon>DataCTHoadon.xsd</DependentUpon>
+    <None Include="DtaHD.xsc">
+      <DependentUpon>DtaHD.xsd</DependentUpon>
     </None>
-    <None Include="DataCTHoadon.xsd">
+    <None Include="DtaHD.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataCTHoadon.Designer.cs</LastGenOutput>
+      <LastGenOutput>DtaHD.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataCTHoadon.xss">
-      <DependentUpon>DataCTHoadon.xsd</DependentUpon>
+    <None Include="DtaHD.xss">
+      <DependentUpon>DtaHD.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BUS_QLKS.BUS_DichVu.datasource" />

@@ -11,6 +11,13 @@ namespace DAO_QLKS
     public class DAO_ThanhVien : DBConnect
     {
         //GET USER
+        public DataTable getInHoaDon()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT HOADON.MAHD, KHACHHANG.MAKH, KHACHHANG.TENKH, DICHVU.MADV, DICHVU.TENDV, CTHOADON.SOLUONG, DICHVU.DONGIA, DATPHONG.MADP, PHONG.MAPHONG, PHONG.DONGIA AS DONGIAPHONG FROM  CTHOADON INNER JOIN DICHVU ON CTHOADON.MADV = DICHVU.MADV INNER JOIN HOADON ON CTHOADON.MAHD = HOADON.MAHD INNER JOIN KHACHHANG ON HOADON.MAKH = KHACHHANG.MAKH INNER JOIN DATPHONG ON KHACHHANG.MAKH = DATPHONG.MAKH INNER JOIN PHONG ON DATPHONG.MAPHONG = PHONG.MAPHONG ", _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public DataTable getThanhVien()
         {
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM [THANHVIEN] ", _conn);

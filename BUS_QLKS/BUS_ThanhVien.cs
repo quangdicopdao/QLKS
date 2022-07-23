@@ -49,7 +49,10 @@ namespace BUS_QLKS
         {
             return dao.xoaThanhVien(us);
         }
-
+        public DataTable getInHoaDon()
+        {
+            return dao.getInHoaDon();
+        }
     }
 
 }

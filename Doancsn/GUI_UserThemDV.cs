@@ -60,6 +60,7 @@ namespace Doancsn
 
         private void GUI_UserThemDV_Load(object sender, EventArgs e)
         {
+            btnNhan.Visible = false;
             loadInfo();
             loadDatPhong();
             lbRoom.Text = lbText;
@@ -77,13 +78,14 @@ namespace Doancsn
             dtgvChonDV.Columns[2].Width = (int)(dtgvChonDV.Width * 0.2);
             dtgvChonDV.Columns[3].Width = (int)(dtgvChonDV.Width * 0.2);
         }
-
-        private void btnNhanPhong_Click(object sender, EventArgs e)
+        /*
+        private void rjButton3_Click(object sender, EventArgs e)
         {
-            btnThanhToan.Visible = true;
-            btnSave.Visible = true;
-            btnNhanPhong.Visible = false;
+            btnThanh.Visible = true;
+            btnLuu.Visible = true;
+            btnNhan.Visible = false;
         }
+        */
         void loadDatPhong()
         {
             txtMaphong.Texts = lbText;
@@ -127,7 +129,58 @@ namespace Doancsn
             loadInfo();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnThanh_Click(object sender, EventArgs e)
+        {
+            btnThanh.Visible = false;
+            btnLuu.Visible = true;
+            btnNhan.Visible = true;
+        }
+
+        private void btnNhan_Click(object sender, EventArgs e)
+        {
+            //btnNhan.Visible = false;
+            GUI_Test n = new GUI_Test();
+            n.Show();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                //save info customer
+                if (btnNam.Checked == true)
+                {
+                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, true, txtCCCD.Texts, dpkNS.Text);
+                    if (busKH.themKhachHang(dt))
+                    {
+                        MessageBox.Show("Thêm khách hàng thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm khách hàng không thành công!");
+                    }
+                }
+                else if (btnNu.Checked == true)
+                {
+                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, false, txtCCCD.Texts, dpkNS.Text);
+                    if (busKH.themKhachHang(dt))
+                    {
+                        MessageBox.Show("Thêm khách hàng thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm khách hàng không thành công!");
+                    }
+                }
+
+            }
+            else
+            {
+
+            }
+        }
+        /*
+        private void rjButton2_Click(object sender, EventArgs e)
         {
             if(tabControl1.SelectedIndex == 0)
             {
@@ -163,7 +216,7 @@ namespace Doancsn
 
             }
         }
-
+        */
         private void cboLoaidv_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cboLoaidv.SelectedIndex == 0)
