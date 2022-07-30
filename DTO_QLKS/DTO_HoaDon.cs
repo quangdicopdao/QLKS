@@ -9,7 +9,7 @@ namespace DTO_QLKS
     public class DTO_HoaDon
     {
         string mahd;
-        int makh,dongia;
+        int makh;
         public string Mahd
         {
             get { return mahd; }
@@ -20,18 +20,12 @@ namespace DTO_QLKS
             get { return makh; }
             set { makh = value; }
         }
-        public int Dongia
-        {
-            get { return dongia; }
-            set { dongia = value; }
-        }
 
         public DTO_HoaDon() { }
-        public DTO_HoaDon(string mahd,int makh,int dongia) 
+        public DTO_HoaDon(string mahd,int makh) 
         {
             this.mahd = mahd;
             this.makh = makh;
-            this.dongia = dongia;
         }
     }
 }

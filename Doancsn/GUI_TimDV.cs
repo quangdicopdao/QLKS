@@ -39,7 +39,7 @@ namespace Doancsn
         private void iconPictureBoxFind_Click(object sender, EventArgs e)
         {
             txtFind.Texts.ToUpper();
-           dtgvDichVu.DataSource = busDV.getTimKiem("SELECT * FROM DICHVU WHERE TENDV LIKE '%"+txtFind.Texts.Trim()+"%'");
+           dtgvDichVu.DataSource = busDV.getTimKiem("SELECT * FROM DICHVU WHERE TENDV LIKE N'%"+txtFind.Texts.Trim()+"%'");
         }
 
        

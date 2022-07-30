@@ -30,7 +30,7 @@ namespace DAO_QLKS
         //Loai dich vu hien thi all
         public DataTable getLoadTatCa()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT LOAIDV,TENDV,DONGIA FROM DICHVU ", _conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT LOAIDV,MADV,TENDV,DONGIA FROM DICHVU ", _conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -39,7 +39,7 @@ namespace DAO_QLKS
         //Loai dich vu hien thi theo ma dv
         public DataTable getThemdv(string data)
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT LOAIDV,TENDV,DONGIA FROM DICHVU WHERE LOAIDV = N'"+data+"'", _conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT LOAIDV,MADV,TENDV,DONGIA FROM DICHVU WHERE LOAIDV = N'"+data+"'", _conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;

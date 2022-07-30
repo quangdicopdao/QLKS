@@ -83,9 +83,9 @@
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(342, 427);
+            this.btnIn.Location = new System.Drawing.Point(667, 419);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(75, 23);
+            this.btnIn.Size = new System.Drawing.Size(119, 49);
             this.btnIn.TabIndex = 3;
             this.btnIn.Text = "In Hóa Đơn";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 502);
+            this.ClientSize = new System.Drawing.Size(790, 475);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);

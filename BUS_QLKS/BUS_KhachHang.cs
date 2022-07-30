@@ -35,5 +35,9 @@ namespace BUS_QLKS
         {
             return dao.xoaKhachHang(MAKH);
         }
+        public DataTable TimKhachHang(string sql)
+        {
+            return dao.TimKhachHang(sql);
+        }
     }
 }

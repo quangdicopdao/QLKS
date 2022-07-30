@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using System.Data.SqlClient;
 using BUS_QLKS;
 using DTO_QLKS;
 namespace Doancsn
@@ -24,6 +25,7 @@ namespace Doancsn
         BUS_KhachSan busKS = new BUS_KhachSan();
         BUS_HoaDon busHD = new BUS_HoaDon();
         BUS_Phong busP = new BUS_Phong();
+        BUS_DatPhong busDP = new BUS_DatPhong();
         public GUI_UserThemDV()
         {
             InitializeComponent();
@@ -60,14 +62,16 @@ namespace Doancsn
 
         private void GUI_UserThemDV_Load(object sender, EventArgs e)
         {
-            btnNhan.Visible = false;
-            loadInfo();
-            loadDatPhong();
+
+            //loadInfo();
+            //loadDatPhong();
+            txtMaphong.Texts = lbText;
             lbRoom.Text = lbText;
             dtgvThemDV.DataSource = busDV.getLoadTatCa();
             //add datatable
             tbChondv = new DataTable();
             tbChondv.Columns.Add("Tên dịch vụ");
+            tbChondv.Columns.Add("Mã dịch vụ");
             tbChondv.Columns.Add("Giá dịch vụ");
             tbChondv.Columns.Add("Số lượng");
             tbChondv.Columns.Add("Thành tiền");
@@ -78,34 +82,24 @@ namespace Doancsn
             dtgvChonDV.Columns[2].Width = (int)(dtgvChonDV.Width * 0.2);
             dtgvChonDV.Columns[3].Width = (int)(dtgvChonDV.Width * 0.2);
         }
-        /*
-        private void rjButton3_Click(object sender, EventArgs e)
-        {
-            btnThanh.Visible = true;
-            btnLuu.Visible = true;
-            btnNhan.Visible = false;
-        }
-        */
-        void loadDatPhong()
+       
+       /* void loadDatPhong()
         {
             txtMaphong.Texts = lbText;
 
             //GET MAHD
-            cboMahd.DisplayMember = "MAHD";
-            cboMahd.ValueMember = "MAHD";
-            cboMahd.DataSource = busHD.getMahd();
+            
             //GET MAKH
-            cboMakh.DisplayMember = "MAKH";
-            cboMakh.ValueMember = "MAKH";
-            cboMakh.DataSource = busKH.getMakh();
+            
             // get dpmakh
             cboDPMakh.DisplayMember = "MAKH";
             cboDPMakh.ValueMember = "MAKH";
             cboDPMakh.DataSource = busKH.getMakh();
         }
-        void loadInfo()
+        */
+       /* void loadInfo()
         {
-            DataTable dt = busKH.getInfoKH(cboMakh.Texts);
+            //DataTable dt = busKH.getInfoKH(cboMakh.Texts);
             DataTable dp = busP.getInfoDatPhong(lbText);
             if (dp.Rows.Count > 0)
             {
@@ -122,27 +116,129 @@ namespace Doancsn
                 dpkNgaysinh.Text = dt.Rows[0]["NGAYSINH"].ToString();
 
             }
-        }
+        }*/
         private void btnRefesh_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(dateNgaySinh.Text);
             //loadDatPhong();
-            loadInfo();
+            //loadInfo();
         }
 
-        private void btnThanh_Click(object sender, EventArgs e)
+        private void btnTT_Click(object sender, EventArgs e)
         {
-            btnThanh.Visible = false;
-            btnLuu.Visible = true;
-            btnNhan.Visible = true;
-        }
-
-        private void btnNhan_Click(object sender, EventArgs e)
-        {
-            //btnNhan.Visible = false;
+            if (dtgvChonDV.RowCount > 1)
+            {
+                SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-T8VO5NK\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
+                for (int i = 0; i < dtgvChonDV.Rows.Count - 1; i++)
+                {
+                    SqlCommand cmd = new SqlCommand("INSERT INTO CTHOADON(MAHD,MADV,SOLUONG) VALUES ('" + txtMaHD.Texts + "','" + dtgvChonDV.Rows[i].Cells[1].Value + "','" + dtgvChonDV.Rows[i].Cells[3].Value + "')", conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            if (dtgvChonDV.RowCount == 1)
+            {
+                
+                SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-T8VO5NK\SQLEXPRESS;Initial Catalog=QLKS;Integrated Security=True");
+                    //dtgvChonDV.Rows[i].Cells[1].Value
+                    SqlCommand cmd = new SqlCommand("INSERT INTO CTHOADON(MAHD) VALUES ('" + txtMaHD.Texts + "')", conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    
+            }
             GUI_Test n = new GUI_Test();
             n.Show();
         }
 
+        private void btnL_Click(object sender, EventArgs e)
+        {
+
+            if (tabControl1.SelectedIndex == 1)
+            {
+                
+                int makh = int.Parse(cboDPMakh.Texts);
+                DTO_HoaDon hd = new DTO_HoaDon(txtMaHD.Texts, makh);
+                DTO_DatPhong dp = new DTO_DatPhong(0,txtMaphong.Texts,makh,D1.Text,D2.Text,cboGioNhan.Texts,cboGioTra.Texts);
+                if (busHD.themHoaDon(hd) && busDP.themDatPhong(dp))
+                {
+                    MessageBox.Show("Đặt phòng thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Đặt phòng không thành công!");
+                }
+            }
+            
+        }
+
+        private void btnRes_Click(object sender, EventArgs e)
+        {
+            
+            
+            cboDPMakh.DisplayMember = "MAKH";
+            cboDPMakh.ValueMember = "MAKH";
+            cboDPMakh.DataSource = busKH.getMakh();
+            
+        }
+        
+
+        private void btnN_Click(object sender, EventArgs e)
+        {
+            
+            if (tabControl1.SelectedIndex == 0)
+            {
+                btnL.Visible = true;
+                btnTT.Visible = true;
+                //btnN.Text = "Thêm hóa đơn";
+                btnN.Visible=false;
+                //save info customer
+                if (btnNam.Checked == true)
+                {
+                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, true, txtCCCD.Texts, dateNgaySinh.Text);
+                    if (busKH.themKhachHang(dt))
+                    {
+                        MessageBox.Show("Nhận phòng thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhận phòng không thành công!");
+                        btnN.Visible = true;
+                    }
+                }
+                else if (btnNu.Checked == true)
+                {
+                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, false, txtCCCD.Texts, dateNgaySinh.Text);
+                    if (busKH.themKhachHang(dt))
+                    {
+                        MessageBox.Show("Nhận phòng thành công!");
+                        //MessageBox.Show("Thêm khách hàng thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhận phòng không thành công!");
+                        //MessageBox.Show("Thêm khách hàng không thành công!");
+                    }
+                }
+
+            }
+            /*else if (tabControl1.SelectedIndex == 1)
+            {
+                DTO_HoaDon dt = new DTO_HoaDon(txtMaHD.Texts, int.Parse(cboDPMakh.Texts));
+                if (busHD.themHoaDon(dt))
+                {
+                    MessageBox.Show("Thêm hóa đơn thành công !");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm hóa đơn không thành công !");
+
+                }
+            }*/
+
+        }
+        /*
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (tabControl1.SelectedIndex == 0)
@@ -179,44 +275,8 @@ namespace Doancsn
 
             }
         }
-        /*
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            if(tabControl1.SelectedIndex == 0)
-            {
-                //save info customer
-                if(btnNam.Checked == true)
-                {
-                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, true, txtCCCD.Texts, dpkNS.Text);
-                    if (busKH.themKhachHang(dt))
-                    {
-                        MessageBox.Show("Thêm khách hàng thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm khách hàng không thành công!");
-                    }
-                }
-                else if(btnNu.Checked == true)
-                {
-                    DTO_KhachHang dt = new DTO_KhachHang(0, txtTenkh.Texts, false, txtCCCD.Texts, dpkNS.Text);
-                    if (busKH.themKhachHang(dt))
-                    {
-                        MessageBox.Show("Thêm khách hàng thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm khách hàng không thành công!");
-                    }
-                }
-                
-            }
-            else
-            {
-
-            }
-        }
         */
+        
         private void cboLoaidv_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cboLoaidv.SelectedIndex == 0)
@@ -233,6 +293,7 @@ namespace Doancsn
             if(dtgvThemDV.Columns[e.ColumnIndex].Name == "Add")
             {
                 string tendv = dtgvThemDV.Rows[e.RowIndex].Cells["Column2"].FormattedValue.ToString();
+                string madv = dtgvThemDV.Rows[e.RowIndex].Cells["Column4"].FormattedValue.ToString();
                 int gia = int.Parse(dtgvThemDV.Rows[e.RowIndex].Cells["Column3"].FormattedValue.ToString());
                 
                 //
@@ -243,8 +304,8 @@ namespace Doancsn
                 {
                     if (item[0].ToString() == tendv) 
                     {
-                        item[2] = int.Parse(item[2].ToString()) + 1;
-                        item[3] = int.Parse(item[1].ToString()) * int.Parse(item[2].ToString());
+                        item[3] = int.Parse(item[3].ToString()) + 1;
+                        item[4] = int.Parse(item[2].ToString()) * int.Parse(item[3].ToString());
                         check = false;
                         break;
                     }
@@ -253,9 +314,10 @@ namespace Doancsn
                 {
                     row = tbChondv.NewRow();
                     row[0] = tendv;
-                    row[1] = gia;
-                    row[2] = 1;
-                    row[3] = gia;
+                    row[1] = madv;
+                    row[2] = gia;
+                    row[3] = 1;
+                    row[4] = gia;
                     tbChondv.Rows.Add(row);
                     row1 = row[0].ToString();
                     row2 = row[1].ToString();

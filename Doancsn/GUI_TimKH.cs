@@ -36,7 +36,8 @@ namespace Doancsn
 
         private void iconPictureBoxFind_Click(object sender, EventArgs e)
         {
-
+            txtFind.Texts.ToUpper();
+            dtgvKhachHang.DataSource = busKH.TimKhachHang("SELECT * FROM KHACHHANG WHERE TENKH LIKE N'%" + txtFind.Texts.Trim() + "%'");
         }
 
         private void dtgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)

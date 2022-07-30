@@ -57,45 +57,50 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(18, 138);
+            label1.Location = new System.Drawing.Point(14, 112);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(98, 16);
+            label1.Size = new System.Drawing.Size(82, 13);
             label1.TabIndex = 0;
             label1.Text = "Mã khách hàng";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(18, 214);
+            label2.Location = new System.Drawing.Point(14, 174);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(103, 16);
+            label2.Size = new System.Drawing.Size(86, 13);
             label2.TabIndex = 0;
             label2.Text = "Tên khách hàng";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(18, 296);
+            label3.Location = new System.Drawing.Point(14, 240);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(54, 16);
+            label3.Size = new System.Drawing.Size(47, 13);
             label3.TabIndex = 0;
             label3.Text = "Giới tính";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(18, 375);
+            label4.Location = new System.Drawing.Point(14, 305);
+            label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(88, 16);
+            label4.Size = new System.Drawing.Size(73, 13);
             label4.TabIndex = 0;
             label4.Text = "CCCD/CMND";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(18, 441);
+            label5.Location = new System.Drawing.Point(14, 358);
+            label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(67, 16);
+            label5.Size = new System.Drawing.Size(54, 13);
             label5.TabIndex = 0;
             label5.Text = "Ngày sinh";
             // 
@@ -118,8 +123,9 @@
             this.panelThem.Controls.Add(label1);
             this.panelThem.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelThem.Location = new System.Drawing.Point(0, 0);
+            this.panelThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelThem.Name = "panelThem";
-            this.panelThem.Size = new System.Drawing.Size(413, 557);
+            this.panelThem.Size = new System.Drawing.Size(310, 453);
             this.panelThem.TabIndex = 0;
             this.panelThem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelThem_MouseDown);
             // 
@@ -130,9 +136,11 @@
             this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.btnClose.IconColor = System.Drawing.SystemColors.ControlText;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.Location = new System.Drawing.Point(364, 3);
+            this.btnClose.IconSize = 26;
+            this.btnClose.Location = new System.Drawing.Point(273, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(46, 32);
+            this.btnClose.Size = new System.Drawing.Size(34, 26);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnClose.TabIndex = 6;
             this.btnClose.TabStop = false;
@@ -145,10 +153,11 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.iconPictureBox1.IconColor = System.Drawing.Color.BlueViolet;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 96;
-            this.iconPictureBox1.Location = new System.Drawing.Point(136, 12);
+            this.iconPictureBox1.IconSize = 78;
+            this.iconPictureBox1.Location = new System.Drawing.Point(102, 10);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(148, 96);
+            this.iconPictureBox1.Size = new System.Drawing.Size(111, 78);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox1.TabIndex = 5;
             this.iconPictureBox1.TabStop = false;
@@ -163,9 +172,10 @@
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(235, 495);
+            this.btnReset.Location = new System.Drawing.Point(176, 402);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(165, 42);
+            this.btnReset.Size = new System.Drawing.Size(124, 34);
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Làm lại";
             this.btnReset.TextColor = System.Drawing.Color.White;
@@ -182,9 +192,10 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(26, 495);
+            this.btnAdd.Location = new System.Drawing.Point(20, 402);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(178, 42);
+            this.btnAdd.Size = new System.Drawing.Size(134, 34);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Lưu";
             this.btnAdd.TextColor = System.Drawing.Color.White;
@@ -197,10 +208,11 @@
             this.dpkNgaySinh.BorderSize = 0;
             this.dpkNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpkNgaySinh.Location = new System.Drawing.Point(149, 438);
+            this.dpkNgaySinh.Location = new System.Drawing.Point(112, 356);
+            this.dpkNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dpkNgaySinh.MinimumSize = new System.Drawing.Size(4, 35);
             this.dpkNgaySinh.Name = "dpkNgaySinh";
-            this.dpkNgaySinh.Size = new System.Drawing.Size(250, 35);
+            this.dpkNgaySinh.Size = new System.Drawing.Size(188, 35);
             this.dpkNgaySinh.SkinColor = System.Drawing.Color.BlueViolet;
             this.dpkNgaySinh.TabIndex = 3;
             this.dpkNgaySinh.TextColor = System.Drawing.Color.White;
@@ -210,11 +222,12 @@
             this.btnNu.AccessibleDescription = "";
             this.btnNu.AutoSize = true;
             this.btnNu.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnNu.Location = new System.Drawing.Point(274, 291);
-            this.btnNu.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnNu.Location = new System.Drawing.Point(206, 236);
+            this.btnNu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNu.MinimumSize = new System.Drawing.Size(0, 17);
             this.btnNu.Name = "btnNu";
-            this.btnNu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnNu.Size = new System.Drawing.Size(55, 21);
+            this.btnNu.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnNu.Size = new System.Drawing.Size(47, 17);
             this.btnNu.TabIndex = 2;
             this.btnNu.TabStop = true;
             this.btnNu.Text = "Nữ";
@@ -225,11 +238,12 @@
             // 
             this.btnNam.AutoSize = true;
             this.btnNam.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnNam.Location = new System.Drawing.Point(163, 295);
-            this.btnNam.MinimumSize = new System.Drawing.Size(0, 21);
+            this.btnNam.Location = new System.Drawing.Point(122, 240);
+            this.btnNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNam.MinimumSize = new System.Drawing.Size(0, 17);
             this.btnNam.Name = "btnNam";
-            this.btnNam.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnNam.Size = new System.Drawing.Size(67, 21);
+            this.btnNam.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnNam.Size = new System.Drawing.Size(55, 17);
             this.btnNam.TabIndex = 2;
             this.btnNam.TabStop = true;
             this.btnNam.Text = "Nam";
@@ -245,15 +259,14 @@
             this.txtCCCD.BorderSize = 2;
             this.txtCCCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCCD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCCCD.Location = new System.Drawing.Point(150, 365);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCCCD.Location = new System.Drawing.Point(112, 297);
             this.txtCCCD.Multiline = false;
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCCCD.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtCCCD.PasswordChar = false;
             this.txtCCCD.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCCCD.PlaceholderText = "CCCD/CMND";
-            this.txtCCCD.Size = new System.Drawing.Size(250, 35);
+            this.txtCCCD.Size = new System.Drawing.Size(188, 29);
             this.txtCCCD.TabIndex = 2;
             this.txtCCCD.Texts = "";
             this.txtCCCD.UnderlinedStyle = false;
@@ -267,15 +280,14 @@
             this.txtTenkh.BorderSize = 2;
             this.txtTenkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenkh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTenkh.Location = new System.Drawing.Point(150, 204);
-            this.txtTenkh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenkh.Location = new System.Drawing.Point(112, 166);
             this.txtTenkh.Multiline = false;
             this.txtTenkh.Name = "txtTenkh";
-            this.txtTenkh.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTenkh.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtTenkh.PasswordChar = false;
             this.txtTenkh.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTenkh.PlaceholderText = "Tên khách hàng";
-            this.txtTenkh.Size = new System.Drawing.Size(250, 35);
+            this.txtTenkh.Size = new System.Drawing.Size(188, 29);
             this.txtTenkh.TabIndex = 1;
             this.txtTenkh.Texts = "";
             this.txtTenkh.UnderlinedStyle = false;
@@ -290,28 +302,29 @@
             this.txtMaKH.Enabled = false;
             this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaKH.Location = new System.Drawing.Point(150, 128);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaKH.Location = new System.Drawing.Point(112, 104);
             this.txtMaKH.Multiline = false;
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtMaKH.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.txtMaKH.PasswordChar = false;
             this.txtMaKH.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMaKH.PlaceholderText = "Mã khách hàng";
-            this.txtMaKH.Size = new System.Drawing.Size(135, 35);
+            this.txtMaKH.Size = new System.Drawing.Size(101, 29);
             this.txtMaKH.TabIndex = 0;
             this.txtMaKH.Texts = "";
             this.txtMaKH.UnderlinedStyle = false;
             // 
             // GUI_KhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(412, 557);
+            this.ClientSize = new System.Drawing.Size(309, 453);
             this.Controls.Add(this.panelThem);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GUI_KhachHang";
             this.Text = "P";
+            this.Load += new System.EventHandler(this.GUI_KhachHang_Load);
             this.panelThem.ResumeLayout(false);
             this.panelThem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();

@@ -41,6 +41,13 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
+        public DataTable TimPhong(string sql)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql, _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         /// Thêm Khách sạn
 
         public bool themPhong(DTO_Phong tv)

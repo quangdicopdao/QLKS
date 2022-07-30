@@ -78,5 +78,10 @@ namespace Doancsn
                 MessageBox.Show("Chưa nhập đủ thông tin");
             }
         }
+
+        private void GUI_KhachHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -127,34 +127,41 @@ namespace Doancsn
         }
         void CreateButtonHotel(int row, int col)
         {
-            int indexTop = 100;
-            for(int i = 0; i < col; i++)
+            int indexTop = 50;
+            for (int i = 0; i < row; i++)
             {
                 int indexLeft = 50;
-                for(int j = 0; j < row; j++)
+                for (int j = 0; j < col; j++)
                 {
-                    RJButton btn = new RJButton();
+                    //create new button
+                    FontAwesome.Sharp.IconButton btn = new FontAwesome.Sharp.IconButton();
+                    //RJButton btn = new RJButton();
                     btn.Name = string.Format("bt01", i, j);
                     btn.Tag = string.Format("[{0},{1}]", i, j);
-                    btn.Text = string.Format("P{0}{1}", i, j + 1);
+                    btn.Text = string.Format("KS{0}{1}", i, j + 1);
+                    btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
                     btn.Size = new Size(285, 142);
                     btn.Top = indexTop;
                     btn.Left = indexLeft;
 
                     indexLeft += 300;
-                    btn.BgColor = Color.FromArgb(154, 205, 50);
+                    btn.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+                    btn.IconColor = Color.White;
+                    btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    btn.IconSize = 60;
+                    btn.FlatAppearance.BorderSize = 0;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.BackColor = Color.FromArgb(154, 205, 50);
                     btn.ForeColor = Color.White;
 
                     //events click
                     btn.Click += (sender1, args) =>
                     {
 
-                        //GUI_DatPhongDichVu dv = new GUI_DatPhongDichVu(btn.Text);
-                        GUI_UserPhong p = new GUI_UserPhong();
-                        p.Show();
+                        GUI_UserPhong dv = new GUI_UserPhong();
+                        dv.Show();
                         this.Hide();
-                        //dv.Show();
-
+                       
                     };
 
 
@@ -167,11 +174,7 @@ namespace Doancsn
 
         private void GUI_NguoiDung_Load(object sender, EventArgs e)
         {
-            cboSoPhong.DisplayMember = "SOPHONG";
-            cboSoPhong.ValueMember =  "SOPHONG";
-            cboSoPhong.DataSource = bus.getSoPhong();
-            int sp = Convert.ToInt32(cboSoPhong.Text);
-            CreateButtonHotel(sp/2, (sp/2)+1);
+            CreateButtonHotel(3,3);
         }
 
         private void cboArea_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -184,10 +187,6 @@ namespace Doancsn
             Reset();
         }
 
-        private void cboSoPhong_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int sp = Convert.ToInt32(cboSoPhong.Text);
-            CreateButtonHotel(sp / 2, (sp / 2) + 1);
-        }
+        
     }
 }

@@ -36,5 +36,9 @@ namespace BUS_QLKS
         {
             return dao.xoaPhong(MAPHONG);
         }
+        public DataTable TimPhong(string sql)
+        {
+            return dao.TimPhong(sql);
+        }
     }
 }

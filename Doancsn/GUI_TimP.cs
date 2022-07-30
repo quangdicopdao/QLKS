@@ -36,7 +36,8 @@ namespace Doancsn
 
         private void iconPictureBoxFInd_Click(object sender, EventArgs e)
         {
-
+            rjTextBox1.Texts.ToUpper();
+            dtgvPhong.DataSource = busP.TimPhong("SELECT * FROM PHONG WHERE MAPHONG LIKE N'%" + rjTextBox1.Texts.Trim() + "%'");
         }
 
         private void dtgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)

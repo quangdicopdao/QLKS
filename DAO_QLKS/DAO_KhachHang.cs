@@ -35,6 +35,13 @@ namespace DAO_QLKS
             da.Fill(dt);
             return dt;
         }
+        public DataTable TimKhachHang(string sql)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql, _conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         //Them
         public bool themKhachHang(DTO_KhachHang tv)
         {

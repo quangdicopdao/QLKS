@@ -20,5 +20,9 @@ namespace BUS_QLKS
         {
             return dao.getMahd();
         }
+        public bool themHoaDon(DTO_HoaDon tv)
+        {
+            return dao.themHoaDon(tv);
+        }
     }
 }

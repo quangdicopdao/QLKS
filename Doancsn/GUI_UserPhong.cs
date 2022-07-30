@@ -74,10 +74,54 @@ namespace Doancsn
             }
         }
 
-        
+        void CreateButtonRoom2(int row, int col)
+        {
+            int indexTop = 50;
+            for (int i = 0; i < row; i++)
+            {
+                int indexLeft = 50;
+                for (int j = 0; j < col; j++)
+                {
+                    //create new button
+                    FontAwesome.Sharp.IconButton btn = new FontAwesome.Sharp.IconButton();
+                    //RJButton btn = new RJButton();
+                    btn.Name = string.Format("bt01", i, j);
+                    btn.Tag = string.Format("[{0},{1}]", i, j);
+                    btn.Text = string.Format("P{0}{1}", i, j + 1);
+                    btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+                    btn.Size = new Size(285, 142);
+                    btn.Top = indexTop;
+                    btn.Left = indexLeft;
+
+                    indexLeft += 300;
+                    btn.IconChar = FontAwesome.Sharp.IconChar.User;
+                    btn.IconColor = Color.White;
+                    btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    btn.IconSize = 60;
+                    btn.FlatAppearance.BorderSize = 0;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.BackColor = Color.FromArgb(112,128,144);
+                    btn.ForeColor = Color.White;
+
+                    //events click
+                    btn.Click += (sender1, args) =>
+                    {
+
+                        GUI_UserThemDV dv = new GUI_UserThemDV(btn.Text);
+                        dv.Show();
+                        btn.IconChar = FontAwesome.Sharp.IconChar.User;
+                        btn.BackColor = Color.DarkGray;
+                    };
+
+
+                    //panel
+                    panelCreateRoom.Controls.Add(btn);
+                }
+                indexTop += 200;
+            }
+        }
         private void GUI_UserPhong_Load(object sender, EventArgs e)
         {
-            CreateButtonRoom(5,5 );
         }
 
         private void panelClose_MouseDown(object sender, MouseEventArgs e)
@@ -138,16 +182,19 @@ namespace Doancsn
 
         private void btnPhongtrong_CheckedChanged(object sender, EventArgs e)
         {
+            CreateButtonRoom(1, 5);
             changeLabel();
         }
 
         private void btnPhongdadat_CheckedChanged(object sender, EventArgs e)
         {
+            CreateButtonRoom2(2, 5);
             changeLabel();
         }
 
         private void btnTatCa_CheckedChanged(object sender, EventArgs e)
         {
+            CreateButtonRoom(5, 5);
             changeLabel();
         }
 
